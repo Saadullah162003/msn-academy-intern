@@ -351,13 +351,11 @@ body, html {
     border-left: 6px solid #131374; /* Accent color */
 }
 
-/* Hover effect */
 .certificate-details:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 28px rgba(0,0,0,0.2);
 }
 
-/* Style headings and text inside */
 .certificate-details h3 {
     font-size: 22px;
     color: #131374;
@@ -367,7 +365,6 @@ body, html {
     gap: 10px;
 }
 
-/* Optional: add a certificate icon before heading */
 .certificate-details h3::before {
     content: "\f0a3"; /* Font Awesome certificate icon */
     font-family: "Font Awesome 6 Free";
@@ -376,7 +373,6 @@ body, html {
     font-size: 26px;
 }
 
-/* Style paragraph text */
 .certificate-details p {
     font-size: 16px;
     color: #333;
@@ -387,7 +383,6 @@ body, html {
     color: #131374;
 }
 
-/* Highlight the values */
 .certificate-details p span {
     background: #e0e7ff;
     padding: 4px 8px;
@@ -395,6 +390,7 @@ body, html {
     font-weight: 500;
     color: #0f0f90;
 }
+
 
 
 
