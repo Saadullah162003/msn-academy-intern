@@ -204,8 +204,8 @@
                     roleButtons.forEach(b => b.classList.remove("active"));
                     btn.classList.add("active");
 
-                    const role = btn.getAttribute("data-role");
-                    certificateImage.src = certificates[role];
+                    const role = btn.getAttribute("data-role").toLowerCase();
+                    certificateImage.src = certificates[role] || certificates["default"];
 
                     // Show feedback only for student or intern
                     if (role === "student" || role === "intern") {
@@ -234,15 +234,12 @@
                     return;
                 }
 
-                const type = activeRoleBtn.getAttribute("data-role");
-
                 try {
-                    const response = await fetch("https://yourproject.vercel.app/api/verify", {
+                    const response = await fetch("/api/verify", {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
                         body: JSON.stringify({ id: certificateId })
-                        });
-
+                    });
 
                     if (!response.ok) {
                         throw new Error("❌ Certificate not found");
@@ -250,12 +247,13 @@
 
                     const data = await response.json();
 
-                    // Display certificate details
+                    // ✅ Display certificate details
                     certificateDetails.style.display = "block";
                     document.getElementById("certName").textContent = data.name || "N/A";
                     document.getElementById("certCourse").textContent = data.course || data.department || data.competition || "N/A";
                     document.getElementById("certDate").textContent = data.completionDate || "N/A";
                     document.getElementById("certNumber").textContent = data.certificateNumber || "N/A";
+                    document.getElementById("certRole").textContent = data.role || "N/A";
 
                 } catch (err) {
                     alert(err.message);
@@ -290,6 +288,5 @@
                 overlay.classList.remove('active');
             });
         </script>
-
     </body>
 </html>
