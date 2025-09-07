@@ -391,7 +391,16 @@ body, html {
     color: #0f0f90;
 }
 
-
+.cert-error{
+    display:none; 
+    color:#b30000; 
+    background:#ffe6e6; 
+    border:1px solid #b30000; 
+    padding:10px; 
+    border-radius:8px; 
+    margin-top:10px; 
+    font-weight:bold;
+}
 
 
 /* ================================
@@ -747,6 +756,11 @@ body, html {
     .certificate-details p span {
         font-size: 18px;
         padding: 6px 10px;
+    }
+
+    .cert-error{
+        width: 90%;
+
     }
 }
 
