@@ -176,6 +176,7 @@
         </footer>
 
         <script>
+        document.addEventListener("DOMContentLoaded", () => {
             // DOM Elements
             const roleButtons = document.querySelectorAll(".role-btn");
             const certificateImage = document.getElementById("certificateImage");
@@ -185,7 +186,7 @@
             const feedbackSection = document.getElementById("feedbackSection");
             const feedbackInput = document.getElementById("feedbackInput");
             const submitFeedback = document.getElementById("submitFeedback");
-
+        
             // Certificate image mapping
             const certificates = {
                 student: "images/Certificates Designs/Student Course Completion Certificate.png",
@@ -193,77 +194,81 @@
                 competitor: "images/Certificates Designs/MSN Competition Certificate for app and web.png",
                 default: "images/Certificates Designs/default.png"
             };
-
+        
             // Set default certificate preview
-            window.addEventListener("DOMContentLoaded", () => {
-                certificateImage.src = certificates["default"];
-                certificateDetails.style.display = "none"; // hide details initially
-            });
-
+            certificateImage.src = certificates["default"];
+            certificateDetails.style.display = "none"; // hide details initially
+        
             // Role selection
             roleButtons.forEach(btn => {
                 btn.addEventListener("click", () => {
                     roleButtons.forEach(b => b.classList.remove("active"));
                     btn.classList.add("active");
-
+        
                     const role = btn.getAttribute("data-role").toLowerCase();
                     certificateImage.src = certificates[role] || certificates["default"];
-
+        
                     // Show feedback only for student or intern
                     if (role === "student" || role === "intern") {
                         feedbackSection.style.display = "block";
                     } else {
                         feedbackSection.style.display = "none";
                     }
-
+        
                     // Hide certificate details until verification
                     certificateDetails.style.display = "none";
                 });
             });
-
+        
             // Verify certificate button
             verifyBtn.addEventListener("click", async () => {
                 const certificateId = certificateIdInput.value.trim();
                 const activeRoleBtn = document.querySelector(".role-btn.active");
-
+        
                 if (!activeRoleBtn) {
                     alert("⚠ Please select a role first!");
                     return;
                 }
-
+        
                 if (!certificateId) {
                     alert("⚠ Please enter your certificate ID!");
                     return;
                 }
-
+        
                 try {
                     const response = await fetch("https://msn-academy-intern.vercel.app/api/verify", {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
                         body: JSON.stringify({ id: certificateId })
                     });
-
-
+        
                     if (!response.ok) {
                         throw new Error("❌ Certificate not found");
                     }
-
+        
                     const data = await response.json();
-
+        
                     // ✅ Display certificate details
                     certificateDetails.style.display = "block";
-                    document.getElementById("certName").textContent = data.name || "N/A";
-                    document.getElementById("certCourse").textContent = data.course || data.department || data.competition || "N/A";
-                    document.getElementById("certDate").textContent = data.completionDate || "N/A";
-                    document.getElementById("certNumber").textContent = data.certificateNumber || "N/A";
-                    document.getElementById("certRole").textContent = data.role || "N/A";
-
+        
+                    const certName = document.getElementById("certName");
+                    const certCourse = document.getElementById("certCourse");
+                    const certDate = document.getElementById("certDate");
+                    const certNumber = document.getElementById("certNumber");
+                    const certRole = document.getElementById("certRole");
+        
+                    if (certName) certName.textContent = data.name || "N/A";
+                    if (certCourse) certCourse.textContent = data.course || data.department || data.competition || "N/A";
+                    if (certDate) certDate.textContent = data.completionDate || "N/A";
+                    if (certNumber) certNumber.textContent = data.certificateNumber || "N/A";
+                    if (certRole) certRole.textContent = data.role || "N/A";
+        
                 } catch (err) {
                     alert(err.message);
                     certificateDetails.style.display = "none";
                 }
             });
-
+        
             // Feedback submission
             submitFeedback.addEventListener("click", () => {
                 const feedback = feedbackInput.value.trim();
@@ -275,21 +280,23 @@
                     alert("⚠ Please write something before submitting.");
                 }
             });
-
+        
             // Sidebar (mobile menu)
             const menuBtn = document.getElementById('menu-btn');
             const sidebar = document.getElementById('sidebar');
             const overlay = document.getElementById('overlay');
-
+        
             menuBtn.addEventListener('click', () => {
                 sidebar.classList.toggle('active');
                 overlay.classList.toggle('active');
             });
-
+        
             overlay.addEventListener('click', () => {
                 sidebar.classList.remove('active');
                 overlay.classList.remove('active');
             });
+        });
         </script>
+
     </body>
 </html>
