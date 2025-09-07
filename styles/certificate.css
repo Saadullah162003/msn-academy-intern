@@ -393,13 +393,13 @@ body, html {
 
 .cert-error{
     display:none; 
-    color:#b30000; 
-    background:#ffe6e6; 
-    border:1px solid #b30000; 
     padding:10px; 
     border-radius:8px; 
     margin-top:10px; 
     font-weight:bold;
+    border: 2px solid #e74c3c;
+    background: #fdecea;
+    color: #c0392b;
 }
 
 
