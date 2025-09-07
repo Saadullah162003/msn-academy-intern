@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MSN-Academy/Course</title>
+        <link rel="stylesheet" href="styles/courses.css">
+        <link rel="icon" href="icons/favicon.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+        <div class="header-background">
+            <section class="header">
+                <div class="left-section">
+                    <img class="academy-logo" src="icons/logo.png" alt="MSN Academy Logo">
+                    <nav class="nav-links">
+                        <a href="main.html" class="home">Home</a>
+                        <a href="course.html" class="courses">Courses</a>
+                        <a href="certificate.html" class="certi">Certificate</a>
+                        <a href="contact.html" class="contact">Contact Us</a>
+                    </nav>
+                </div>
+                <div class="right-section">
+                    <a href="https://forms.gle/c82S9HnVPQCKf1vE8">
+                        <button class="join-button">Join</button>
+                    </a>
+                    <button class="learn-button">Learn</button>
+                </div>
+                     
+                <!-- Hamburger -->
+                <button id="menu-btn" class="hamburger">&#9776;</button>
+            </section>
+
+            <section class="Frame">
+                <p class="Frame-title">MSN Academy</p>
+                <h1 class="Frame-heading">Master Your Skills to Shape the Future</h1>
+                <p class="Frame-text">Explore our diverse courses designed to elevate your digital skills and career opportunities.</p>
+                <button class="enroll-frame-button">Enroll now</button>
+            </section>
+        </div>
+
+            <!-- Sidebar (for mobile) -->
+            <div class="sidebar" id="sidebar">
+                <a href="main.html" class="home">Home</a>
+                <a href="course.html" class="courses">Courses</a>
+                <a href="certificate.html" class="certi">Certificate</a>
+                <a href="contact.html" class="contact">Contact Us</a>
+                <a href="https://forms.gle/c82S9HnVPQCKf1vE8" class="join">Join</a>
+                <a href="#" class="learn">Learn</a>
+            </div>
+
+            <!-- Overlay (click to close) -->
+            <div id="overlay" class="overlay"></div>
+
+
+        <section class="Courses">
+            <h2 class="courses-title">
+                Explore Our Comprehensive Course Offerings for Aspiring Digital Professionals
+            </h2>
+            <div class="course-grid">
+                <div class="course-card">
+                    <img src="images/course-thumbnails/course1.avif" alt="Data Analyst">
+                    <h3>Data Analyst</h3>
+                    <p class="certificate">Professional Certificate</p>
+                    <p class="rating">&#11088; 4.5 (7.2k)</p>
+                    <div class="buttons">
+                        <a href="da.html">
+                        <button class="enroll-button">Enroll now</button>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=r-uOLxNrNk8&ab_channel=freeCodeCamp.org" target="_blank">
+                            <button class="watch-button">Watch demo</button>
+                        </a>  
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <img src="images/course-thumbnails/course2.avif" alt="Python Programming">
+                    <h3>Python Programming</h3>
+                    <p class="certificate">Professional Certificate</p>
+                    <p class="rating">&#11088; 4.6 (6.8k)</p>
+                    <div class="buttons">
+                        <a href="PP.html">
+                        <button class="enroll-button">Enroll now</button>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=UrsmFxEIp5k&ab_channel=CodeWithHarry" target="_blank">
+                            <button class="watch-button">Watch demo</button>
+                        </a>  
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <img src="images/course-thumbnails/course3.jpeg" alt="Generative AI">
+                    <h3>Generative Artificial Intelligence (Gen AI)</h3>
+                    <p class="certificate">Professional Certificate</p>
+                    <p class="rating">&#11088; 4.7 (5.5k)</p>
+                    <div class="buttons">
+                        <a href="GenAI.html">
+                        <button class="enroll-button">Enroll now</button>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=d4yCWBGFCEs&t=29s&ab_channel=codebasics" target="_blank">
+                            <button class="watch-button">Watch demo</button>
+                        </a> 
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <img src="images/course-thumbnails/course4.jpg" alt="ASP.NET Core">
+                    <h3>Software Engineering with ASP.NET Core</h3>
+                    <p class="certificate">Professional Certificate</p>
+                    <p class="rating">&#11088; 4.5 (7.0k)</p>
+                    <div class="buttons">
+                        <a href="SE NET.html">
+                        <button class="enroll-button">Enroll now</button>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=AhAxLiGC7Pc&ab_channel=JulioCasal" target="_blank">
+                            <button class="watch-button">Watch demo</button>
+                        </a> 
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <img src="images/course-thumbnails/course5.avif" alt="Graphic Designing">
+                    <h3>Full Stack Graphic Designing with UI UX</h3>
+                    <p class="certificate">Professional Certificate</p>
+                    <p class="rating">&#11088; 4.6 (6.2k)</p>
+                    <div class="buttons">
+                        <a href="FSG UIUX.html">
+                        <button class="enroll-button">Enroll now</button>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=jdmX8ZIMRUU&ab_channel=Intellipaat" target="_blank">
+                            <button class="watch-button">Watch demo</button>
+                        </a> 
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <img src="images/course-thumbnails/course6.webp" alt="Digital Marketing">
+                    <h3>Digital Marketing with AI tools</h3>
+                    <p class="certificate">Professional Certificate</p>
+                    <p class="rating">&#11088; 4.5 (5.9k)</p>
+                    <div class="buttons">
+                        <a href="DM AI.html">
+                        <button class="enroll-button">Enroll now</button>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=kunkYTKFNtI&ab_channel=WsCubeTech" target="_blank">
+                            <button class="watch-button">Watch demo</button>
+                        </a> 
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <img src="images/course-thumbnails/course7.jpg" alt="Frontend Development">
+                    <h3>Frontend Development</h3>
+                    <p class="certificate">Professional Certificate</p>
+                    <p class="rating">&#11088; 4.6 (6.7k)</p>
+                    <div class="buttons">
+                        <a href="FD.html">
+                        <button class="enroll-button">Enroll now</button>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=jgfq8OybWZQ&ab_channel=WsCubeTech" target="_blank">
+                            <button class="watch-button">Watch demo</button>
+                        </a> 
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <img src="images/course-thumbnails/course8.webp" alt="MERN Stack">
+                    <h3>MERN Stack</h3>
+                    <p class="certificate">Professional Certificate</p>
+                    <p class="rating">&#11088; 4.7 (6.0k)</p>
+                    <div class="buttons">
+                        <a href="MERN.html">
+                        <button class="enroll-button">Enroll now</button>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=F4zr1aMevB4&ab_channel=Intellipaat" target="_blank">
+                            <button class="watch-button">Watch demo</button>
+                        </a> 
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <img src="images/course-thumbnails/course9.jpg" alt="Wordpress Development">
+                    <h3>Wordpress Development</h3>
+                    <p class="certificate">Professional Certificate</p>
+                    <p class="rating">&#11088; 4.5 (5.8k)</p>
+                    <div class="buttons">
+                        <a href="WD.html">
+                        <button class="enroll-button">Enroll now</button>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=uSFqm72oemQ&ab_channel=LetsUncover" target="_blank">
+                            <button class="watch-button">Watch demo</button>
+                        </a> 
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <img src="images/course-thumbnails/course10.jpg" alt="Competitive Programming">
+                    <h3>Competitive Programming</h3>
+                    <p class="certificate">Professional Certificate</p>
+                    <p class="rating">&#11088; 4.8 (4.9k)</p>
+                    <div class="buttons">
+                        <a href="CP.html">
+                        <button class="enroll-button">Enroll now</button>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=tw1vExHbjWM&list=PLxgZQoSe9cg0-p9RHvaf32XoFEHT_2tj2&ab_channel=CollegeWallah" target="_blank">
+                            <button class="watch-button">Watch demo</button>
+                        </a> 
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <h2 class="features-title">Discover Your Path to Digital Mastery</h2>
+            <p class="features-subtitle">
+                At MSN Academy, we offer a structured approach to learning that combines theoretical 
+                knowledge with practical application. Our courses are designed to equip you with the 
+                skills needed to thrive in the digital landscape.
+            </p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <img src="images/feature-images/feature1.jpeg" alt="Interactive Learning" />
+                    <h3>Interactive Learning Modules for Real-World Skills</h3>
+                    <p>Each course includes hands-on projects to reinforce learning.</p>
+                </div>
+
+                <div class="feature-card">
+                    <img src="images/feature-images/feature2.jpg" alt="Personal Mentorship" />
+                    <h3>Personal Mentorship to Guide Your Journey</h3>
+                    <p>Our experienced mentors provide personalized guidance throughout your learning experience.</p>
+                </div>
+
+                <div class="feature-card">
+                    <img src="images/feature-images/feature3.jpg" alt="Community" />
+                    <h3>Join a Community of Aspiring Professionals</h3>
+                    <p>Collaborate with peers and industry experts as you learn.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Mentorship Section -->
+        <section class="mentorship-section">
+            <div class="mentorship-text">
+                <h2>Get Mentorship From Industry Experts</h2>
+                <p>
+                    Learn directly from experienced mentors who guide you through real-world projects, 
+                    answer your questions, and help you grow your career faster.
+                </p>
+                <button class="learn-more-button">Learn More</button>
+            </div>
+            <div class="mentorship-image">
+                <img src="images/feature-images/feature4.webp" alt="Mentorship Session">
+            </div>
+        </section>
+
+        <!-- Journey Section -->
+        <section class="journey-section">
+            <div class="journey-image">
+                <img src="images/feature-images/feature5.jpg" alt="Ready to Start Your Journey?" style="width:100%; border-radius:12px;">
+            </div>
+            <div class="journey-text">
+                <h2>Ready to Start Your Journey?</h2>
+                <p>
+                    Begin your learning path today and unlock your potential with our hands-on courses 
+                    and personalized guidance.
+                </p>
+                <div class="journey-buttons">
+                    <button class="enroll-button">Enroll Now</button>
+                    <button class="contact-button">Contact Us</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+        <div class="footer-content">
+            <div>
+            <img src="icons/logo.png" alt="Academy Logo" class="academy-logo-bottom">
+            </div>
+
+            <div>
+            <h4>About Us</h4>
+            <a href="#">Our Story</a><br>
+            <a href="#">Mission &amp; Vision</a><br>
+            <a href="#">Careers</a>
+            </div>
+
+            <div>
+                <h4>Courses</h4>
+                <a href="DA.html">Data Analyst</a><br>
+                <a href="PP.html">Python Programming</a><br>
+                <a href="GenAI.html">Generative Artificial Intelligence (Gen AI)</a>
+                <a href="SE NET.html">Software Engineering with ASP.NET Core</a><br>
+                <a href="FSG UIUX.html">Full Stack Graphic Designing with UI UX</a><br>
+                <a href="DM AI.html">Digital Marketing with AI tools</a><br>
+                <a href="FD.html">Frontend Development</a><br>
+                <a href="MERN.html">MERN Stack</a><br>
+                <a href="WD.html">Wordpress Development</a><br>
+                <a href="CP.html">Competitive Programming</a>
+            </div>
+
+            <div>
+            <h4>Support</h4>
+            <a href="#">FAQs</a><br>
+            <a href="#">Contact: +92 324 8290683</a><br>
+            <a href="#">Privacy Policy</a>
+            </div>
+
+            <div>
+            <h4>Follow Us</h4>
+            <a href="mailto:msn.academy269@gmail.com">msn.academy269@gmail.com</a><br>
+            <a href="https://www.linkedin.com/company/msn-academy269/">LinkedIn</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2025 Your Website Name. All rights reserved.
+        </div>
+        </footer>
+
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        const reveals = document.querySelectorAll(".reveal");
+
+        function revealOnScroll() {
+            const windowHeight = window.innerHeight;
+            reveals.forEach(el => {
+            const top = el.getBoundingClientRect().top;
+            if (top < windowHeight - 100) {
+                el.classList.add("active");
+            }
+            });
+        }
+
+        window.addEventListener("scroll", revealOnScroll);
+        revealOnScroll();
+        });
+            const menuBtn = document.getElementById('menu-btn');
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+
+            menuBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+            });
+
+            overlay.addEventListener('click', () => {
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+            });
+        </script>
+
+
+    </body>
+</html>

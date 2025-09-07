@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MSN-Academy</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="icon" href="icons/favicon.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+        <div class="header-background">
+            <section class="header">
+                <div class="left-section">
+                    <img class="academy-logo" src="icons/logo.png" alt="MSN Academy Logo">
+                    <nav class="nav-links">
+                        <a href="main.html" class="home">Home</a>
+                        <a href="course.html" class="courses">Courses</a>
+                        <a href="certificate.html" class="certi">Certificate</a>
+                        <a href="contact.html" class="contact">Contact Us</a>
+                    </nav>
+                </div>
+                <div class="right-section">
+                    <a href="https://forms.gle/c82S9HnVPQCKf1vE8">
+                        <button class="join-button">Join</button>
+                    </a>
+                    <button class="learn-button">Learn</button>
+                </div>
+                     
+                <!-- Hamburger -->
+                <button id="menu-btn" class="hamburger">&#9776;</button>
+            </section>
+
+            <section class="Frame">
+                <p class="Frame-title">MSN Academy</p>
+                <h1 class="Frame-heading">Master Your Skills to Shape the Future</h1>
+                <p class="Frame-text">Explore our diverse courses designed to elevate your digital skills and career opportunities.</p>
+                <button class="enroll-frame-button">Enroll now</button>
+            </section>
+        </div>
+
+        
+            <!-- Sidebar (for mobile) -->
+            <div class="sidebar" id="sidebar">
+                <a href="main.html" class="home">Home</a>
+                <a href="course.html" class="courses">Courses</a>
+                <a href="certificate.html" class="certi">Certificate</a>
+                <a href="contact.html" class="contact">Contact Us</a>
+                <a href="https://forms.gle/c82S9HnVPQCKf1vE8" class="join">Join</a>
+                <a href="#" class="learn">Learn</a>
+            </div>
+
+            <!-- Overlay (click to close) -->
+            <div id="overlay" class="overlay"></div>
+
+
+        <!-- intro-section -->
+        <section class="intro-section">
+            <div class="intro-text">
+                <h2>Empower Your Future with MSN Academy</h2>
+                <p>
+                    MSN Academy strives to be a leading nation-building institution, equipping individuals with in-demand tech skills, 
+                    an innovative mindset, and the drive to shape Pakistan&rsquo;s future and beyond. We deliver high-quality, affordable 
+                    education that bridges the gap between academia and industry, producing job-ready professionals through hands-on 
+                    learning, expert mentorship, and real-world projects. Guided by our core values of integrity and transparency, 
+                    innovation and excellence, student-centric growth, diversity and inclusion, and empowerment through knowledge, 
+                    we are committed to developing skilled, confident, and future-ready leaders.
+                </p>
+                <button class="learn-more-button">Learn More</button>
+            </div>
+            <div class="intro-image">
+                <img src="images/feature-images/main1.jpg" alt="MSN Academy Team">
+            </div>
+        </section>
+
+
+        <section class="Courses">
+            <h2 class="courses-title">
+                Explore Our Comprehensive Course Offerings
+            </h2>
+            <p class="course-subtitle">
+                At MSN Academy, we provide a diverse range of courses designed to equip you with 
+                the skills needed for success in the digital world. Whether you&apos;re a beginner or 
+                looking to enhance your expertise, we have something for everyone.
+            </p>
+            <div class="course-grid">
+                <div class="course-card">
+                    <img src="images/course-thumbnails/course1.avif" alt="Data Analyst">
+                    <h3>Data Analyst</h3>
+                    <p class="certificate">Professional Certificate</p>
+                    <p class="rating">&#11088; 4.5 (7.2k)</p>
+                    <div class="buttons">
+                        <a href="DA.html">
+                            <button class="enroll-button">Enroll now</button>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=zK_ZyOw0prs&amp;list=PLZbMaGH5VmjXJXvoMK4LHcZGq83pLAM1A&amp;index=6&amp;ab_channel=MSNAcademy">
+                            <button class="watch-button">Watch demo</button>
+                        </a>    
+                        
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <img src="images/course-thumbnails/course2.avif" alt="Python Programming">
+                    <h3>Python Programming</h3>
+                    <p class="certificate">Professional Certificate</p>
+                    <p class="rating">&#11088; 4.6 (6.8k)</p>
+                    <div class="buttons">
+                        <a href="PP.html">
+                            <button class="enroll-button">Enroll now</button>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=5_zgpd269I4&amp;list=PLZbMaGH5VmjXJXvoMK4LHcZGq83pLAM1A&amp;index=5&amp;ab_channel=MSNAcademy">
+                            <button class="watch-button">Watch demo</button>
+                        </a>  
+                    </div>
+                </div>
+
+                <div class="course-card">
+                    <img src="images/course-thumbnails/course3.jpeg" alt="Generative AI">
+                    <h3>Generative Artificial Intelligence (Gen AI)</h3>
+                    <p class="certificate">Professional Certificate</p>
+                    <p class="rating">&#11088; 4.7 (5.5k)</p>
+                    <div class="buttons">
+                        <a href="GenAI.html">
+                            <button class="enroll-button">Enroll now</button>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=KLGIcMBn45A&amp;list=PLZbMaGH5VmjXJXvoMK4LHcZGq83pLAM1A&amp;index=2&amp;ab_channel=MSNAcademy">
+                            <button class="watch-button">Watch demo</button>
+                        </a> 
+                    </div>
+                </div>
+        </section>
+
+        <div class="view-more">
+            <a href="course.html">View More &gt;</a>
+        </div>
+
+
+
+        <!-- Founder Section -->
+        <section class="founder-section">
+            <div class="founder-content">
+                <div class="founder-text">
+                    <h2>Meet Muhammad Suleman: Visionary Leader of MSN Academy</h2>
+                    <p>
+                        Muhammad Suleman, Founder &amp; CEO of MSN Academy, leverages his expertise in data 
+                        analysis and digital technologies to empower freelancers and developers in Pakistan. 
+                        He enhanced his skills through a data analytics internship at Systems Limited.
+                    </p>
+                    <div class="vision-experience">
+                        <div>
+                            <h3>Vision</h3>
+                            <p>Empowering youth through practical, job-ready skills.</p>
+                        </div>
+                        <div>
+                            <h3>Experience</h3>
+                            <p>Mentoring in Python, data analysis, and freelancing.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="founder-image">
+                    <img src="images/feature-images/profilepic1.png" alt="Muhammad Suleman - Founder of MSN Academy">
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Management Team Section -->
+        <section class="team-section">
+            <h2 class="team-title">Management Team</h2>
+            <div class="team-grid">
+
+                <div class="team-card">
+                    <img src="images/team/p1.png" alt="Muhammad Suleman">
+                    <h3>Muhammad Suleman</h3>
+                    <p class="role">Founder & CEO</p>
+                    <p class="desc">Passionate about mentoring in data science and freelancing.</p>
+                    <div class="socials">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <img src="images/team/p2.png" alt="Rija Khan">
+                    <h3>Rija Khan</h3>
+                    <p class="role">HR Admin</p>
+                    <p class="desc">Expert in employee relations and administrative HR processes.</p>
+                    <div class="socials">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <img src="images/team/p3.png" alt="Ashba Azeem">
+                    <h3>Ashba Azeem</h3>
+                    <p class="role">Content Manager</p>
+                    <p class="desc">Specializes in managing and creating engaging digital content.</p>
+                    <div class="socials">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <img src="images/team/p4.png" alt="Haadya Khan">
+                    <h3>Haadya Khan</h3>
+                    <p class="role">Content Marketing Member</p>
+                    <p class="desc">Creates and promotes engaging content to boost brand awareness and audience engagement.</p>
+                    <div class="socials">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <img src="images/team/p5.png" alt="Daniyal Ahmed">
+                    <h3>Daniyal Ahmed</h3>
+                    <p class="role">Development Lead</p>
+                    <p class="desc">Proficient in software development and system architecture design.</p>
+                    <div class="socials">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <img src="images/team/p6.png" alt="Laraib Ali">
+                    <h3>Laraib Ali</h3>
+                    <p class="role">Strategic Finance Lead</p>
+                    <p class="desc">Guiding students in building successful freelancing careers.</p>
+                    <div class="socials">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <img src="images/team/p7.png" alt="Najm Ur Rehman">
+                    <h3>Najm Ur Rehman</h3>
+                    <p class="role">Technical Mentor</p>
+                    <p class="desc">Guides learners in mastering technical skills and real-world projects.</p>
+                    <div class="socials">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Trainer Team Section -->
+        <section class="team-section">
+            <h2 class="team-title">Trainer Team</h2>
+            <div class="team-grid">
+
+                <div class="team-card">
+                    <img src="images/trainer/t1.png" alt="Muhammad Furqan">
+                    <h3>Muhammad Furqan</h3>
+                    <p class="role">Full Stack Graphic Trainer</p>
+                    <p class="desc">Trains learners in creative and technical graphic design skills.</p>
+                    <div class="socials">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <img src="images/trainer/t2.png" alt="Bissam Akbar">
+                    <h3>Bissam Akbar</h3>
+                    <p class="role">Digital Marketing Trainer</p>
+                    <p class="desc">Trains learners in strategies and tools for effective online marketing.</p>
+                    <div class="socials">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <img src="images/trainer/t3.png" alt="Fizza Khokhar">
+                    <h3>Fizza Khokhar</h3>
+                    <p class="role">Full Stack Developer | Frontend Trainer</p>
+                    <p class="desc">Develops end-to-end web solutions and trains learners in frontend technologies.</p>
+                    <div class="socials">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <img src="images/trainer/t4.png" alt="Najm Ur Rehman">
+                    <h3>Najm Ur Rehman</h3>
+                    <p class="role">Full Stack Developer | App Dev Trainer</p>
+                    <p class="desc">Builds complete web solutions and trains learners in app development.</p>
+                    <div class="socials">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <img src="images/trainer/t5.png" alt="Muhammad Suleman Nagri">
+                    <h3>Muhammad Suleman Nagri</h3>
+                    <p class="role">Data Analyst Trainer</p>
+                    <p class="desc">Trains learners in data analysis, visualization, and interpretation for informed decision-making.</p>
+                    <div class="socials">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <img src="images/trainer/t6.png" alt="Daniyal Ahmed">
+                    <h3>Daniyal Ahmed</h3>
+                    <p class="role">Frontend Trainer</p>
+                    <p class="desc">Trains learners in designing and developing responsive, user-friendly web interfaces.</p>
+                    <div class="socials">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <img src="images/trainer/t7.png" alt="Shahmir Sandhu">
+                    <h3>Shahmir Sandhu</h3>
+                    <p class="role">MERN Backend Trainer</p>
+                    <p class="desc">Trains learners in building and managing backend systems using the MERN stack.</p>
+                    <div class="socials">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <img src="images/trainer/t8.png" alt="Syed Abdul Wahab">
+                    <h3>Syed Abdul Wahab</h3>
+                    <p class="role">Competitive Programming Trainer</p>
+                    <p class="desc">Trains learners in problem-solving, algorithms, and coding skills for programming competitions.</p>
+                    <div class="socials">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <img src="images/trainer/t9.png" alt="Faseeh Siddique">
+                    <h3>Faseeh Siddique</h3>
+                    <p class="role">Python Programming Trainer</p>
+                    <p class="desc">Trains learners in Python programming and applications.</p>
+                    <div class="socials">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+
+            </div> 
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div>
+                <img src="icons/logo.png" alt="Academy Logo" class="academy-logo-bottom">
+                </div>
+
+                <div>
+                <h4>About Us</h4>
+                <a href="#">Our Story</a><br>
+                <a href="#">Mission &amp; Vision</a><br>
+                <a href="#">Careers</a>
+                </div>
+
+                <div>
+                <h4>Courses</h4>
+                <a href="DA.html">Data Analyst</a><br>
+                <a href="PP.html">Python Programming</a><br>
+                <a href="GenAI.html">Generative Artificial Intelligence (Gen AI)</a>
+                <a href="SE NET.html">Software Engineering with ASP.NET Core</a><br>
+                <a href="FSG UIUX.html">Full Stack Graphic Designing with UI UX</a><br>
+                <a href="DM AI.html">Digital Marketing with AI tools</a><br>
+                <a href="FD.html">Frontend Development</a><br>
+                <a href="MERN.html">MERN Stack</a><br>
+                <a href="WD.html">Wordpress Development</a><br>
+                <a href="CP.html">Competitive Programming</a>
+                </div>
+
+                <div>
+                <h4>Support</h4>
+                <a href="#">FAQs</a><br>
+                <a href="#">Contact: +92 324 8290683</a><br>
+                <a href="#">Privacy Policy</a>
+                </div>
+
+                <div>
+                <h4>Follow Us</h4>
+                <a href="mailto:msn.academy269@gmail.com">msn.academy269@gmail.com</a><br>
+                <a href="https://www.linkedin.com/company/msn-academy269/">LinkedIn</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                &copy; 2025 Your Website Name. All rights reserved.
+            </div>
+        </footer>
+        <script>
+            window.addEventListener("load", function () {
+                window.scrollTo(0, 0);
+            });
+            const menuBtn = document.getElementById('menu-btn');
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+
+            menuBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+            });
+
+            overlay.addEventListener('click', () => {
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+            });
+        </script>
+
+    </body>
+</html>
+
+

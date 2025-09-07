@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MSN-Academy</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="styles/contact.css">
+        <link rel="icon" href="icons/favicon.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+        <!-- Header -->
+        <div class="header-background">
+            <section class="header">
+                <div class="left-section">
+                    <img class="academy-logo" src="icons/logo.png" alt="MSN Academy Logo">
+                    <nav class="nav-links">
+                        <a href="main.html" class="home">Home</a>
+                        <a href="course.html" class="courses">Courses</a>
+                        <a href="certificate.html" class="certi">Certificate</a>
+                        <a href="contact.html" class="contact">Contact Us</a>
+                    </nav>
+                </div>
+                <div class="right-section">
+                    <a href="https://forms.gle/c82S9HnVPQCKf1vE8">
+                        <button class="join-button">Join</button>
+                    </a>
+                    <button class="learn-button">Learn</button>
+                </div>
+                <!-- Hamburger -->
+                <button id="menu-btn" class="hamburger">&#9776;</button>
+            </section>
+        </div>
+        
+            <!-- Sidebar (for mobile) -->
+            <div class="sidebar" id="sidebar">
+                <a href="main.html" class="home">Home</a>
+                <a href="course.html" class="courses">Courses</a>
+                <a href="certificate.html" class="certi">Certificate</a>
+                <a href="contact.html" class="contact">Contact Us</a>
+                <a href="https://forms.gle/c82S9HnVPQCKf1vE8" class="join">Join</a>
+                <a href="#" class="learn">Learn</a>
+            </div>
+
+            <!-- Overlay (click to close) -->
+            <div id="overlay" class="overlay"></div>
+
+        <!-- Frame -->
+        <div class="frame-background">
+            <section class="Frame">
+                <p class="Frame-title">MSN Academy</p>
+                <h1 class="Frame-heading">Contact With Us</h1>
+                <p class="Frame-text">Explore how to connect with us for support, collaboration, or any inquiries, we&apos;re here to help you grow.</p>
+            </section>
+        </div>
+                
+        <!-- Contact Section -->
+        <div class="contact-section">
+            <div class="contact-form">
+                <h2>Contact Us</h2>
+                <p>We&apos;d love to hear from you!</p>
+
+                <form action="#" method="POST">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Type your message..." required></textarea>
+
+                    <button type="submit" class="submit-button">Submit</button>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <p><i class="fa-solid fa-phone"></i> &#43;92 324 8290683</p>
+                <p><i class="fa-solid fa-envelope"></i> msn.academy269&#64;gmail.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> Karachi, Sindh</p>
+                <img src="images/feature-images/contact.jpg" alt="Contact Illustration" class="contact-image">
+            </div>
+        </div>
+
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div>
+                <img src="icons/logo.png" alt="Academy Logo" class="academy-logo-bottom">
+                </div>
+
+                <div>
+                <h4>About Us</h4>
+                <a href="#">Our Story</a><br>
+                <a href="#">Mission &amp; Vision</a><br>
+                <a href="#">Careers</a>
+                </div>
+
+                <div>
+                    <h4>Courses</h4>
+                    <a href="DA.html">Data Analyst</a><br>
+                    <a href="PP.html">Python Programming</a><br>
+                    <a href="GenAI.html">Generative Artificial Intelligence (Gen AI)</a>
+                    <a href="SE NET.html">Software Engineering with ASP.NET Core</a><br>
+                    <a href="FSG UIUX.html">Full Stack Graphic Designing with UI UX</a><br>
+                    <a href="DM AI.html">Digital Marketing with AI tools</a><br>
+                    <a href="FD.html">Frontend Development</a><br>
+                    <a href="MERN.html">MERN Stack</a><br>
+                    <a href="WD.html">Wordpress Development</a><br>
+                    <a href="CP.html">Competitive Programming</a>
+                </div>
+
+                <div>
+                <h4>Support</h4>
+                <a href="#">FAQs</a><br>
+                <a href="#">Contact: &#43;92 324 8290683</a><br>
+                <a href="#">Privacy Policy</a>
+                </div>
+
+                <div>
+                <h4>Follow Us</h4>
+                <a href="mailto:msn.academy269&#64;gmail.com">msn.academy269&#64;gmail.com</a><br>
+                <a href="https://www.linkedin.com/company/msn-academy269/">LinkedIn</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                &copy; 2025 Your Website Name. All rights reserved.
+            </div>
+        </footer>
+        <script>
+            const menuBtn = document.getElementById('menu-btn');
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+
+            menuBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+            });
+
+            overlay.addEventListener('click', () => {
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+            });
+        </script>
+
+
+    </body>
+</html>

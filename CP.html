@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Competitive Programming</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="stylescor/coursedetails.css">
+        <link rel="icon" href="icons/favicon.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+        <!-- Header -->
+        <div class="header-background">
+            <section class="header">
+                <div class="left-section">
+                    <img class="academy-logo" src="icons/logo.png" alt="MSN Academy Logo">
+                    <nav class="nav-links">
+                        <a href="main.html" class="home">Home</a>
+                        <a href="course.html" class="courses">Courses</a>
+                        <a href="certificate.html" class="certi">Certificate</a>
+                        <a href="contact.html" class="contact">Contact Us</a>
+                    </nav>
+                </div>
+
+                <div class="right-section">
+                    <a href="https://forms.gle/c82S9HnVPQCKf1vE8">
+                        <button class="join-button">Join</button>
+                    </a>
+                    <button class="learn-button">Learn</button>
+                </div>
+                <!-- Hamburger -->
+                <button id="menu-btn" class="hamburger">&#9776;</button>
+            </section>
+        </div>
+
+        <!-- Sidebar (for mobile) -->
+        <div class="sidebar" id="sidebar">
+            <a href="main.html" class="home">Home</a>
+            <a href="course.html" class="courses">Courses</a>
+            <a href="certificate.html" class="certi">Certificate</a>
+            <a href="contact.html" class="contact">Contact Us</a>
+            <a href="https://forms.gle/c82S9HnVPQCKf1vE8" class="join">Join</a>
+            <a href="#" class="learn">Learn</a>
+        </div>
+
+        <!-- Overlay (click to close) -->
+        <div id="overlay" class="overlay"></div>
+
+        <!-- Course Section -->
+        <section class="course-section">
+            <div class="course-left">
+                <p class="breadcrumb">Courses &gt; <span style="font-weight: bold;">Competitive Programming</span></p>
+                <h1 style="font-weight: bold;">Competitive Programming</h1>
+                <p class="subtitle">
+                    Master problem solving, algorithms, and data structures for coding contests and technical interviews.
+                </p>
+
+                <div class="course-box">
+                    <h3>Includes:</h3>
+                    <ul>
+                        <li>&#10004; Weekly problem sets &amp; editorials</li>
+                        <li>&#10004; Live contest strategy sessions</li>
+                        <li>&#10004; Code templates (C++/Python/Java)</li>
+                        <li>&#10004; Certification upon completion</li>
+                        <li>&#10004; Lifetime access</li>
+                        <li>&#10004; Community &amp; doubt support</li>
+                        <li>&#10004; Mock contests &amp; analysis</li>
+                        <li>&#10004; Complexity &amp; optimization drills</li>
+                    </ul>
+                </div>
+
+                <div class="more-info">
+                    <h2>More information</h2>
+
+                    <details open>
+                        <summary>Course Overview</summary>
+                        <p>
+                            This course builds a strong foundation in algorithmic thinking and competitive programming.
+                            You’ll cover time–space complexity, data structures, classical algorithms, and contest strategies.
+                            Learn patterns like two-pointers, binary search, greedy, dynamic programming, graphs, trees,
+                            and number theory while solving curated problems from easy to advanced.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>Learning Outcomes</summary>
+                        <ul>
+                            <li>&#10004; Analyze problems and design optimal algorithms (Big-O mastery)</li>
+                            <li>&#10004; Implement core data structures: stacks, queues, heaps, hash maps, DSU</li>
+                            <li>&#10004; Solve DP (1D/2D, knapsack, LIS, bitmask, digit DP) efficiently</li>
+                            <li>&#10004; Work with graphs: BFS/DFS, shortest paths (Dijkstra), MST (Kruskal/Prim), topo sort</li>
+                            <li>&#10004; Apply number theory: primes, sieve, gcd/lcm, modular arithmetic, fast exponentiation</li>
+                            <li>&#10004; Build segment trees &amp; Fenwick trees (range queries/updates)</li>
+                            <li>&#10004; Practice contest strategy: reading, debugging fast, partial scoring</li>
+                        </ul>
+                    </details>
+
+                    <details>
+                        <summary>Target Audience</summary>
+                        <p>
+                            Ideal for students preparing for coding competitions (ICPC, Codeforces, LeetCode, Hackerrank),
+                            interviews, or anyone who wants to sharpen problem-solving skills. Basic programming knowledge required.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>Course Duration</summary>
+                        <p>
+                            The course runs for <strong>12 weeks</strong> with recorded lectures, weekly problem sets,
+                            live walkthroughs, quizzes, and a final mock contest with editorial discussion.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>Enrollment Fee</summary>
+                        <p>
+                            The total fee for the course is <strong>PKR 4500</strong>.
+                            Includes all lectures, problem archives, live sessions, and certification.
+                            A <strong>30-day money-back guarantee</strong> is included.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>Instructor Profile</summary>
+                        <p>
+                            The instructor is a competitive programmer and algorithms mentor with top-rank finishes in online contests,
+                            experienced in coaching teams for collegiate competitions and interview prep.
+                        </p>
+                    </details>
+
+                    <details>
+                        <summary>Practice Tracks &amp; Projects</summary>
+                        <p>Structured practice to build real competitive strength:</p>
+                        <ul>
+                            <li>&#128200; Time Complexity Gym – implement &amp; benchmark O(1) → O(n log n) → O(n²) solutions</li>
+                            <li>&#129518; DSA Toolkit – reusable templates for graphs, DP, trees, and ranges</li>
+                            <li>&#129513; Pattern Packs – binary search, two-pointers, sliding window, prefix sums</li>
+                            <li>&#129504; DP Marathon – classic problems to advanced (knapsack, paths, digit DP)</li>
+                            <li>&#127937; Final Mock Contest – 5 problems, full editorial &amp; code review</li>
+                        </ul>
+                    </details>
+
+                    <details>
+                        <summary>Student Testimonials</summary>
+                        <p>
+                            Learners report major rating jumps on competitive platforms and faster interview problem solving
+                            due to structured practice, code reviews, and contest simulation.
+                        </p>
+                    </details>
+                </div>
+            </div>
+
+            <div class="course-right">
+                <div class="video-box">
+                    <img src="images/course-thumbnails/course10.jpg" alt="Competitive Programming Course Thumbnail">
+                    <div class="play-btn">&#9658;</div>
+                </div>
+                <h2>PKR 4500</h2>
+                <p class="rating">&#11088; 4.8 stars &middot; 4.9k reviews</p>
+                <a href="https://forms.gle/c82S9HnVPQCKf1vE8">
+                    <button class="get-started">Get started</button>
+                </a>
+                  <a href="https://www.youtube.com/watch?v=tw1vExHbjWM&list=PLxgZQoSe9cg0-p9RHvaf32XoFEHT_2tj2&ab_channel=CollegeWallah" target="_blank">
+                    <button class="watch-demo">Watch demo</button>
+                </a> 
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div>
+                    <img src="icons/logo.png" alt="Academy Logo" class="academy-logo-bottom">
+                </div>
+
+                <div>
+                    <h4>About Us</h4>
+                    <a href="#">Our Story</a><br>
+                    <a href="#">Mission &amp; Vision</a><br>
+                    <a href="#">Careers</a>
+                </div>
+
+                <div>
+                    <h4>Courses</h4>
+                    <a href="DA.html">Data Analyst</a><br>
+                    <a href="PP.html">Python Programming</a><br>
+                    <a href="GenAI.html">Generative Artificial Intelligence (Gen AI)</a>
+                    <a href="SE NET.html">Software Engineering with ASP.NET Core</a><br>
+                    <a href="FSG UIUX.html">Full Stack Graphic Designing with UI UX</a><br>
+                    <a href="DM AI.html">Digital Marketing with AI tools</a><br>
+                    <a href="FD.html">Frontend Development</a><br>
+                    <a href="MERN.html">MERN Stack</a><br>
+                    <a href="WD.html">Wordpress Development</a><br>
+                    <a href="CP.html">Competitive Programming</a>
+                </div>
+
+                <div>
+                    <h4>Support</h4>
+                    <a href="#">FAQs</a><br>
+                    <a href="#">Contact: +92 324 8290683</a><br>
+                    <a href="#">Privacy Policy</a>
+                </div>
+
+                <div>
+                    <h4>Follow Us</h4>
+                    <a href="mailto:msn.academy269@gmail.com">msn.academy269@gmail.com</a><br>
+                    <a href="https://www.linkedin.com/company/msn-academy269/">LinkedIn</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                © 2025 Your Website Name. All rights reserved.
+            </div>
+        </footer>
+
+        <script>
+            window.addEventListener("load", function () {
+                window.scrollTo(0, 0);
+            });
+            const menuBtn = document.getElementById('menu-btn');
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+
+            menuBtn.addEventListener('click', () => {
+                sidebar.classList.toggle('active');
+                overlay.classList.toggle('active');
+            });
+
+            overlay.addEventListener('click', () => {
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+            });
+        </script>
+    </body>
+</html>
