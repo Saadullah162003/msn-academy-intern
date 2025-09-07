@@ -9,6 +9,9 @@ This project allows students, interns, and competitors to enroll themselves into
 ---
 
 ## 🚀 Features
+- Enroll using the Google form
+- list of courses
+- Watch demos
 - Verify certificates by **ID** and **role**
 - Show certificate details (Name, Course, Completion Date, Certificate Number, Role)
 - Display styled error messages when:
