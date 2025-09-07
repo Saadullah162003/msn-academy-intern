@@ -274,9 +274,11 @@
                     document.getElementById("certRole").textContent = data.role || "N/A";
 
                 } catch (err) {
+                    const errorBox = document.getElementById("certError");
+                    const errorMsg = document.getElementById("certErrorMsg");
                     certificateDetails.style.display = "none";
                     errorBox.style.display = "block";
-                    errorBox.textContent = err.message;
+                    errorMsg.textContent = err.message;
                 }
             });
 
