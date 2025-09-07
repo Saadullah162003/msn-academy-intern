@@ -4,7 +4,7 @@ A simple **Certificate Verification System** built with
 - **Frontend:** HTML, CSS, JavaScript  
 - **Backend:** Node.js (Vercel Serverless API)  
 
-This project allows students, interns, and competitors to verify their certificates online by entering a certificate ID and selecting their role.
+This project allows students, interns, and competitors to enroll themselves into the academy, verify their certificates online by entering a certificate ID and selecting their role, and contact them for in of information
 
 ---
 
