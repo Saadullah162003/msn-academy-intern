@@ -236,11 +236,12 @@
                 }
 
                 try {
-                    const response = await fetch("/api/verify", {
+                    const response = await fetch("https://msn-academy-intern.vercel.app/api/verify", {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
                         body: JSON.stringify({ id: certificateId })
                     });
+
 
                     if (!response.ok) {
                         throw new Error("❌ Certificate not found");
