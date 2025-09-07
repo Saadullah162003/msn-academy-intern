@@ -6,7 +6,6 @@ export default function handler(req, res) {
       return res.status(400).json({ error: "Certificate ID is required" });
     }
 
-    // Certificates data (mock database)
     const certificates = {
       "MSN123": {
         name: "Ali Khan",
