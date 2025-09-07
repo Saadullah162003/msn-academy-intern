@@ -1,0 +1,505 @@
+/* ================================
+   GENERAL STYLES
+================================ */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Schibsted Grotesk', sans-serif;
+    background: rgb(252, 249, 249);
+    overflow-x: hidden;
+    height: 100%;
+}
+/* ================================
+   HEADER and FRAME
+================================ */
+.header-background {
+    background-image: linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.25)),
+                      url("../images/background/background22.png") !important;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed;
+    position: relative;
+    color: #fff;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+    animation: fadeUp 1s ease-out forwards;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: transparent;
+    font-size: 20px;
+}
+
+.left-section, .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.left-section { gap: 30px; color: rgb(214, 210, 210); }
+
+.academy-logo { height: 80px; }
+
+.nav-links p, .home, .courses, .certi, .contact,.join,.learn {
+    margin: 0;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    transition: text-decoration 0.15s;
+}
+.nav-links p:hover, .home:hover, .courses:hover, .certi:hover, .contact:hover,.join:hover,learn:hover {
+    text-decoration: underline;
+}
+
+.arrow {
+    margin-top: 2px;
+    margin-left: 4px;
+    display: inline-block;
+    text-decoration: none;
+}
+.arrow:hover { text-decoration: none; }
+
+.right-section { display: flex; gap: 10px; }
+
+.join-button, .learn-button {
+    border: none;
+    border-radius: 10px;
+    height: 30px;
+    width: 70px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.25), 0 2px 4px rgba(0,0,0,0.15);
+    transition: text-decoration 0.15s;
+}
+.join-button { background: white; color: rgb(19,19,116); }
+.learn-button { background: rgb(19,19,116); color: white; }
+.join-button:hover, .learn-button:hover { text-decoration: underline; }
+.join-button:hover, 
+.learn-button:hover{
+    transform: translateY(-3px) scale(1.05);
+    animation: glow 0.6s ease-in-out;
+}
+
+
+.frame-background{
+    background-image: linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.25)),
+                      url("../images/background/frame.jpg") !important;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed;
+    position: relative;
+    color: #fff;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+    animation: fadeUp 1s ease-out forwards;
+    z-index: 1;
+}
+.Frame {
+    padding: 80px 20px;
+    background: transparent;
+    animation: fadeLeft 1.2s ease-out forwards;
+}
+.Frame-title, .Frame-text { color: rgb(214, 210, 210); }
+.Frame-title { font-size: 20px; }
+.Frame-heading {color:white; font-size: 36px; margin: 10px 0; width: 480px; }
+.Frame-text { max-width: 500px; margin-bottom: 20px; }
+/* ================================
+   HAMBURGER & SIDEBAR
+================================ */
+.hamburger {
+  display: none;
+  font-size: 60px;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #8a1515;
+  border:none;
+  margin-top: -45px;
+  margin-right: 50px;
+}
+
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -315px; 
+  width: 250px;
+  height: 23%;
+  margin-top: 150px;
+  background:  #00122E;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 1001;
+  border-radius: 16px;
+  margin-right: 20px;
+  overflow-x: hidden;
+}
+
+
+.sidebar.active {
+  right: 0;
+}
+
+
+.sidebar a {
+  padding: 12px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 40px;
+  border-bottom: 5px solid #b30000;
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 35%;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+  font-size: 30px;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+/* ================================
+   CONTACT SECTION
+================================ */
+.contact-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.contact-form h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: rgb(9, 9, 65);
+}
+.contact-form p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+}
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-button {
+    background: rgb(19,19,116);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.submit-button:hover {
+    background: rgb(25,25,150);
+    transform: translateY(-3px);
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+.contact-info p {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 150px;
+}
+.contact-info i {
+    font-size: 18px;
+    color: rgb(19,19,116);
+}
+.contact-image {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+    margin-left: 100px;
+}
+
+
+@media (max-width: 900px) {
+    .contact-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .contact-info {
+        align-items: center;
+    }
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+.footer {
+    background: none !important;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+                      url("../images/background/background22.png") !important;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed;
+    position: relative;
+    color: #fff;
+    padding: 50px 20px;
+    box-shadow: 0 -10px 30px rgba(0,0,0,0.3);
+    animation: fadeUp 2.2s ease-out forwards;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px;
+    max-width: 1200px;
+    margin: auto;
+    align-items: start;
+}
+.footer h4 {
+    margin-bottom: 14px;
+    font-weight: 650;
+    font-size: 16px;
+}
+.footer a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 12px;
+    display: inline-block;
+    margin-bottom: 6px;
+}
+.footer a:hover { text-decoration: underline; }
+.footer-bottom {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 15px;
+}
+.academy-logo-bottom {
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* ================================
+   ANIMATIONS 
+================================ */
+
+@keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(40px); }
+    60% { opacity: 0.7; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeLeft {
+    0% { opacity: 0; transform: translateX(-40px); }
+    60% { opacity: 0.7; transform: translateX(-10px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeRight {
+    0% { opacity: 0; transform: translateX(40px); }
+    60% { opacity: 0.7; transform: translateX(10px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes glow {
+    0%, 100% { box-shadow: 0 4px 12px rgba(0,0,0,0.25); }
+    50% { box-shadow: 0 6px 24px rgba(255,255,255,0.45); }
+}
+
+
+.header-background,
+.frame-background,
+.footer {
+    animation-timing-function: ease-in-out !important;
+    animation-duration: 1.5s !important;
+    will-change: transform, opacity;
+}
+
+.Frame {
+    animation-timing-function: ease-in-out !important;
+    animation-duration: 1.8s !important;
+    will-change: transform, opacity;
+}
+
+
+.contact-section {
+    opacity: 0;
+    animation: fadeUp 1.6s ease-in-out forwards;
+    animation-delay: 0.3s;
+}
+
+
+.contact-form {
+    opacity: 0;
+    animation: fadeLeft 1.6s ease-in-out forwards;
+    animation-delay: 0.6s;
+}
+
+
+.contact-info {
+    opacity: 0;
+    animation: fadeRight 1.6s ease-in-out forwards;
+    animation-delay: 0.9s;
+}
+
+
+.contact-image {
+    opacity: 0;
+    animation: fadeUp 1.6s ease-in-out forwards;
+    animation-delay: 1.2s;
+}
+
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 992px) {
+    .nav-links,.join-button,.learn-button {
+        display: none; 
+    }
+    .hamburger {
+        display: block; 
+    }
+    .header {
+        flex-direction: row;   
+        justify-content: space-between;
+        align-items: center;
+    }
+    .left-section, .right-section { flex-direction: row; gap: 25px; font-size: 40px; margin-bottom: 20px;}
+    .academy-logo { height: 200px; }
+    .join-button,.learn-button{
+        width:200px;
+        height: 50px;
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+    .enroll-button,.watch-button{
+        width:200px;
+        height: 50px;
+        font-size: 25px;
+    }
+
+    .Frame {
+        padding: 60px 15px;
+        text-align: center;
+    }
+    .Frame-heading {
+        font-size: 28px;
+        width: 100%;
+    }
+    .Frame-text {
+        margin: 0 auto;
+        font-size: 15px;
+    }
+
+    .contact-section {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 30px;
+        width: 90%;
+    }
+
+    .contact-info p {
+        margin-left: 0;
+        justify-content: center;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .contact-image {
+        margin: 0 auto;
+        display: block;
+        max-width: 300px;
+        height: 200%;
+    }
+    .fa-solid fa-phone,.fa-solid fa-envelope,.fa-solid fa-location-dot{
+        height: 100%;
+    }
+
+    #name{
+        height: 30px;
+        width: 90%;
+        font-size: 30px;
+    }
+    #email{
+        height: 20px;
+        width: 90%;
+        font-size: 30px;
+    }
+    #message{
+        width: 90%;
+        font-size: 30px;
+    }
+
+    .submit-button{
+        width:200px;
+        height: 50px;
+        font-size: 25px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        text-align: center;
+    }
+    .footer-content h4{
+        font-size: 60px;
+    }
+    .footer-content a{
+        font-size: 30px;
+    }
+    .academy-logo-bottom {
+        height: 200px;
+        width: 300px;
+    }
+}
+
+

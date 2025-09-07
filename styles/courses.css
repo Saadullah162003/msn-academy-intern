@@ -1,0 +1,532 @@
+/* ========================= */
+/* Global Styles             */
+/* ========================= */
+body, html {
+    padding: 0;
+    margin: 0;
+    background: rgb(252, 249, 249);
+    font-family: 'Schibsted Grotesk', sans-serif;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+/* ========================= */
+/* Header Background         */
+/* ========================= */
+.header-background {
+    background: none !important;
+    background-image:
+        linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.25)),
+        url("../images/background/background22.png") !important;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed;
+    position: relative;
+    color: #fff;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+    animation: fadeUp 1s ease-out forwards;
+}
+
+/* ========================= */
+/* Header                    */
+/* ========================= */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: transparent;
+    font-size: 20px;
+}
+.left-section, .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.left-section {
+    gap: 30px;
+    color: rgb(214, 210, 210);
+}
+.academy-logo { height: 80px; }
+.nav-links p, .home, .courses, .certi, .contact,.join,.learn {
+    margin: 0;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    transition: text-decoration 0.15s;
+}
+.nav-links p:hover, .home:hover, .courses:hover, .certi:hover, .contact:hover,.join:hover,learn:hover {
+    text-decoration: underline;
+}
+.arrow {
+    margin-top: 2px;
+    margin-left: 4px;
+    text-decoration: none;
+    display: inline-block;
+}
+.arrow:hover { text-decoration: none; }
+
+.right-section { display: flex; gap: 10px; }
+.join-button, .learn-button {
+    border: none;
+    border-radius: 10px;
+    height: 30px;
+    width: 70px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25), 0 2px 4px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease-in-out;
+}
+.join-button { background: white; color: rgb(19, 19, 116); }
+.learn-button { background: rgb(19, 19, 116); color: white; }
+.join-button:hover, .learn-button:hover { 
+    transform: translateY(-3px) scale(1.05);
+    animation: glow 0.6s ease-in-out;
+    text-decoration: underline;
+}
+
+/* ================================
+   HAMBURGER & SIDEBAR
+================================ */
+.hamburger {
+  display: none;
+  font-size: 60px;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #8a1515;
+  border:none;
+  margin-top: -45px;
+  margin-right: 50px;
+}
+
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -315px; 
+  width: 250px;
+  height: 23%;
+  margin-top: 150px;
+  background:  #00122E;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 1001;
+  border-radius: 16px;
+  margin-right: 20px;
+  overflow-x: hidden;
+}
+
+
+.sidebar.active {
+  right: 0;
+}
+
+
+.sidebar a {
+  padding: 12px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 40px;
+  border-bottom: 5px solid #b30000;
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 35%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+  font-size: 30px;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ========================= */
+/* Frame (Hero Section)      */
+/* ========================= */
+.Frame {
+    padding: 60px 20px;
+    background: transparent;
+    animation: fadeLeft 1.2s ease-out forwards;
+    text-align: left;
+}
+.Frame-title, .Frame-text { color: rgb(214, 210, 210); }
+.Frame-title { font-size: 20px; }
+.Frame-heading { 
+    font-size: 36px; 
+    margin: 10px 0; 
+    max-width: 100%;
+}
+.Frame-text { max-width: 500px; margin-bottom: 20px; }
+.enroll-frame-button {
+    background: #b30000;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25), 0 2px 4px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease-in-out;
+}
+.enroll-frame-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    animation: glow 0.6s ease-in-out;
+}
+
+/* ========================= */
+/* Courses                   */
+/* ========================= */
+.Courses { 
+    padding: 60px 20px; 
+    text-align: center;
+    animation: fadeUp 1.4s ease-out forwards;
+}
+.courses-title {
+    font-size: 30px;
+    font-weight: 650;
+    margin: 60px auto 80px;
+    color: rgb(9, 9, 65);
+    max-width: 800px;
+}
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.course-card {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+    padding: 16px;
+    text-align: left;
+    transition: transform 0.15s;
+    opacity: 0;
+    animation: fadeUp 1s ease-out forwards;
+}
+.course-card:hover { transform: translateY(-5px); }
+.course-card img {
+    width: 100%;
+    height: 150px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    object-fit: cover;
+}
+.course-card h3 { font-size: 18px; margin: 5px 0; }
+.certificate, .rating { font-size: 14px; color: #555; margin-bottom: 8px;}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 5px;
+}
+.enroll-button, .watch-button {
+    border: none;
+    padding: 8px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25), 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+.enroll-button { background: rgb(19, 19, 116); }
+.watch-button { background: rgb(224, 0, 0); }
+.enroll-button:hover, .watch-button:hover {
+    transform: translateY(-2px);
+    animation: glow 0.6s ease-in-out;
+}
+
+/* ========================= */
+/* Features                  */
+/* ========================= */
+.features-section {
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: auto;
+    animation: fadeRight 1.6s ease-out forwards;
+}
+.features-title {
+    font-size: 30px;
+    font-weight: 650;
+    margin: 60px auto 40px;
+    color: rgb(9, 9, 65);
+    max-width: 800px;
+}
+.features-subtitle {
+    font-size: 16px;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+.feature-card {
+    opacity: 0;
+    animation: fadeUp 1s ease-out forwards;
+}
+.feature-card img {
+    width: 100%;
+    height: 250px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    object-fit: cover;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+.feature-card h3, .feature-card p {
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+}
+.feature-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: rgb(9, 9, 65);
+}
+.feature-card p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* ========================= */
+/* Mentorship & Journey      */
+/* ========================= */
+.mentorship-section, .journey-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 60px auto;
+    gap: 40px;
+    padding: 20px;
+}
+.mentorship-text h2, .journey-text h2 {
+    margin-bottom: 16px;
+    font-size: 30px;
+    font-weight: 650;
+    color: rgb(9, 9, 65);
+    max-width: 800px;
+}
+.mentorship-text p, .journey-text p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.learn-more-button, 
+.journey-buttons .enroll-button, 
+.journey-buttons .contact-button {
+    border: none;
+    padding: 8px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+.learn-more-button, .journey-buttons .enroll-button { background: rgb(19, 19, 116); }
+.journey-buttons .contact-button { background: rgb(224, 0, 0); }
+.learn-more-button:hover, 
+.journey-buttons .enroll-button:hover, 
+.journey-buttons .contact-button:hover {
+    transform: translateY(-2px);
+    animation: glow 0.6s ease-in-out;
+}
+.mentorship-image img, .journey-image img {
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+.journey-image img { width: 100%; max-width: 500px; }
+
+/* ================================
+   FOOTER
+================================ */
+.footer {
+    background: none !important;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+                      url("../images/background/background22.png") !important;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed;
+    position: relative;
+    color: #fff;
+    padding: 50px 20px;
+    box-shadow: 0 -10px 30px rgba(0,0,0,0.3);
+    animation: fadeUp 2.2s ease-out forwards;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap:10px;
+    max-width: 1200px;
+    margin: auto;
+    align-items: start;
+}
+.footer h4 {
+    margin-bottom: 14px;
+    font-weight: 650;
+    font-size: 16px;
+}
+.footer a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 12px;
+    display: inline-block;
+    margin-bottom: 6px;
+}
+.footer a:hover { text-decoration: underline; }
+.footer-bottom {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 15px;
+}
+.academy-logo-bottom {
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* ========================= */
+/* Animations                */
+/* ========================= */
+@keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeLeft {
+    0% { opacity: 0; transform: translateX(-30px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeRight {
+    0% { opacity: 0; transform: translateX(30px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes glow {
+    0%, 100% { box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); }
+    50% { box-shadow: 0 4px 20px rgba(255, 255, 255, 0.4); }
+}
+
+/* ========================= */
+/* Responsive Breakpoints    */
+/* ========================= */
+
+@media (max-width: 992px) {
+    .nav-links,.join-button,.learn-button {
+        display: none; 
+    }
+    .hamburger {
+        display: block;
+    }
+    .header {
+        flex-direction: row;   
+        justify-content: space-between;
+        align-items: center;
+    }
+    .left-section, .right-section { flex-direction: row; gap: 25px; font-size: 40px; margin-bottom: 20px;}
+    .academy-logo { height: 200px; }
+    .join-button,.learn-button{
+        width:200px;
+        height: 50px;
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+    .enroll-button,.contact-button,.learn-more-button,.watch-button{
+        width:200px;
+        height: 50px;
+        font-size: 25px;
+    }
+
+    .Frame { text-align: center; padding: 40px 15px; }
+    .Frame-heading { font-size: clamp(22px, 4vw, 28px); }
+    .Frame-title { font-size: clamp(16px, 3vw, 20px); }
+    .Frame-text { font-size: clamp(14px, 2.5vw, 16px); max-width: 100%; }
+    .enroll-frame-button{
+        width:200px;
+        height: 90px;
+        font-size: 30px;
+        margin-top: 10px;
+    }
+
+    .course-grid {
+        display: grid;
+        grid-template-columns: 1fr; 
+        gap: 40px;
+        width: 80%;               
+        margin: 0 auto;           
+    }
+    .course-card{
+        height: 600px;
+    }
+    .course-card img{
+        height: 300px;
+    }
+    .course-card p,.course-card h3{
+        font-size: 30px;
+    }
+    .watch-button,.enroll-button{
+        margin-top: 0;
+    }
+
+    .features-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .feature-card p{
+        font-size: 25px;
+    }
+
+    .mentorship-section, .journey-section { flex-direction: column; text-align: center; gap: 25px; }
+    .mentorship-text h2, .journey-text h2 { margin-left: 60px;font-size: 50px; justify-content: center; text-align: center; }
+    .mentorship-text p, .journey-text p { font-size: 25px; justify-content: center; text-align: center; }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        text-align: center;
+    }
+    .footer-content h4{
+        font-size: 60px;
+    }
+    .footer-content a{
+        font-size: 30px;
+    }
+    .academy-logo-bottom {
+        height: 200px;
+        width: 300px;
+    }
+}
+
