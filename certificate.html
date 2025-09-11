@@ -8,32 +8,6 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-        <style>
-            /* === Overlay styles (can also be moved to certificate.css) === */
-            .certificate-preview {
-                position: relative; /* Needed so overlay is positioned correctly */
-                display: inline-block;
-            }
-            .cert-overlay {
-                position: absolute;
-                top: 50%;          /* Adjust to match your template */
-                left: 50%;
-                transform: translate(-50%, -50%);
-                text-align: center;
-                color: #222;       /* Choose a contrasting color */
-                font-family: 'Schibsted Grotesk', sans-serif;
-                pointer-events: none; /* Allow clicks to pass through */
-            }
-            .cert-overlay h3 {
-                font-size: 1.6rem;
-                font-weight: 700;
-                margin: 0;
-            }
-            .cert-overlay p {
-                font-size: 1.2rem;
-                margin: 0;
-            }
-        </style>
     </head>
     <body>
 
@@ -56,7 +30,8 @@
                     </a>
                     <button class="learn-button">Learn</button>
                 </div>
-                <button id="menu-btn" class="hamburger">&#9776;</button>
+                <!-- Hamburger -->
+                <button id="menu-btn" class="hamburger">&#9776;</button> <!-- ☰ -->
             </section>
         </div>
 
@@ -69,13 +44,15 @@
             <a href="https://forms.gle/c82S9HnVPQCKf1vE8" class="join">Join</a>
             <a href="#" class="learn">Learn</a>
         </div>
-        <div id="overlay" class="overlay"></div>
 
+        <!-- Overlay (click to close) -->
+        <div id="overlay" class="overlay"></div>
+        
         <!-- Certificate Verification Section -->
         <section class="certificate-verification">
             <h2>Certificate Verification</h2>
             <p>Easily verify your certificate issued by MSN Academy. Just select your role and enter your ID to access your certificate details.</p>
-
+            
             <div class="verification-container">
                 <!-- Left Side -->
                 <div class="verification-left">
@@ -91,12 +68,14 @@
                     <button id="verifyBtn">Verify Certificate</button>
                     <p class="instant-text">Instant results available</p>
 
+                    <!-- Feedback Section -->
                     <div id="feedbackSection" class="feedback-section" style="display:none;">
-                        <h2>We&apos;d love your Feedback &#128172;</h2>
+                        <h2>We&apos;d love your Feedback &#128172;</h2> <!-- 💬 -->
                         <textarea id="feedbackInput" placeholder="Write your review here..."></textarea>
                         <button id="submitFeedback">Submit Feedback</button>
                     </div>
 
+                    <!-- Details -->
                     <div class="details-box">
                         <h4>Details</h4>
                         <p>Your certificate will include your full name, course name or intern department, completion date, and a unique certificate number. You can also preview your certificate once verified.</p>
@@ -107,14 +86,7 @@
                 <div class="verification-right">
                     <div class="certificate-preview">
                         <img id="certificateImage" src="images/Certificates Designs/default.png" alt="Certificate Preview">
-
-                        <!-- 🔹 Overlay text shown after verification -->
-                        <div id="certOverlay" class="cert-overlay">
-                            <h3 id="overlayName"></h3>
-                            <p id="overlayCourse"></p>
-                        </div>
                     </div>
-
                     <!-- Certificate Details -->
                     <div id="certificateDetails" class="certificate-details">
                         <p><strong>Name:</strong> <span id="certName"></span></p>
@@ -124,6 +96,7 @@
                         <p><strong>Role:</strong> <span id="certRole"></span></p>
                     </div>
 
+                    <!-- Error Box -->
                     <div id="certError" class="cert-error"></div>
                 </div>
             </div>
@@ -132,20 +105,25 @@
         <!-- Steps Section -->
         <section class="verification-steps">
             <h1 class="steps-title">Certificate Verification Made Simple</h1>
-            <p class="steps-subtitle">Easily verify your certificate from MSN Academy. Select your role and enter your ID to access your credentials.</p>
+            <p class="steps-subtitle">
+                Easily verify your certificate from MSN Academy. Select your role and enter your ID to access your credentials.
+            </p>
+
             <div class="steps-container">
                 <div class="step">
-                    <div class="step-icon">&#9745;</div>
+                    <div class="step-icon">&#9745;</div> <!-- ☑ -->
                     <h3>Choose Your Role</h3>
                     <p>Select either Student or Intern or Competitor to proceed.</p>
                 </div>
+
                 <div class="step">
-                    <div class="step-icon">&#9745;</div>
+                    <div class="step-icon">&#9745;</div> <!-- ☑ -->
                     <h3>Enter Your ID</h3>
                     <p>Provide the relevant ID to verify your certificate.</p>
                 </div>
+
                 <div class="step">
-                    <div class="step-icon">&#9745;</div>
+                    <div class="step-icon">&#9745;</div> <!-- ☑ -->
                     <h3>See Your Certificate</h3>
                     <p>Click the button to verify your certificate.</p>
                 </div>
@@ -158,12 +136,14 @@
                 <div>
                     <img src="icons/logo.png" alt="Academy Logo" class="academy-logo-bottom">
                 </div>
+
                 <div>
                     <h4>About Us</h4>
                     <a href="#">Our Story</a><br>
                     <a href="#">Mission & Vision</a><br>
                     <a href="#">Careers</a>
                 </div>
+
                 <div>
                     <h4>Courses</h4>
                     <a href="DA.html">Data Analyst</a><br>
@@ -177,18 +157,21 @@
                     <a href="WD.html">Wordpress Development</a><br>
                     <a href="CP.html">Competitive Programming</a>
                 </div>
+
                 <div>
                     <h4>Support</h4>
                     <a href="#">FAQs</a><br>
                     <a href="#">Contact: +92 324 8290683</a><br>
                     <a href="#">Privacy Policy</a>
                 </div>
+
                 <div>
                     <h4>Follow Us</h4>
                     <a href="mailto:msn.academy269@gmail.com">msn.academy269@gmail.com</a><br>
                     <a href="https://www.linkedin.com/company/msn-academy269/">LinkedIn</a>
                 </div>
             </div>
+
             <div class="footer-bottom">
                 &copy; 2025 Your Website Name. All rights reserved.
             </div>
@@ -196,6 +179,7 @@
 
         <script>
         document.addEventListener("DOMContentLoaded", () => {
+            // DOM Elements
             const roleButtons = document.querySelectorAll(".role-btn");
             const certificateImage = document.getElementById("certificateImage");
             const certificateIdInput = document.getElementById("certificateId");
@@ -206,9 +190,7 @@
             const submitFeedback = document.getElementById("submitFeedback");
             const errorBox = document.getElementById("certError");
 
-            const overlayName = document.getElementById("overlayName");
-            const overlayCourse = document.getElementById("overlayCourse");
-
+            // Certificate image mapping
             const certificates = {
                 student: "images/Certificates Designs/Student Course Completion Certificate.png",
                 intern: "images/Certificates Designs/Internship Completion Example.png",
@@ -216,23 +198,33 @@
                 default: "images/Certificates Designs/default.png"
             };
 
+            // Set default certificate preview
             certificateImage.src = certificates["default"];
-            certificateDetails.style.display = "none";
+            certificateDetails.style.display = "none"; // hide details initially
 
+            // Role selection
             roleButtons.forEach(btn => {
                 btn.addEventListener("click", () => {
                     roleButtons.forEach(b => b.classList.remove("active"));
                     btn.classList.add("active");
+
                     const role = btn.getAttribute("data-role").toLowerCase();
                     certificateImage.src = certificates[role] || certificates["default"];
-                    feedbackSection.style.display = (role === "student" || role === "intern") ? "block" : "none";
+
+                    // Show feedback only for student or intern
+                    if (role === "student" || role === "intern") {
+                        feedbackSection.style.display = "block";
+                    } else {
+                        feedbackSection.style.display = "none";
+                    }
+
+                    // Hide certificate details & errors until verification
                     certificateDetails.style.display = "none";
                     errorBox.style.display = "none";
-                    overlayName.textContent = "";
-                    overlayCourse.textContent = "";
                 });
             });
 
+            // Verify certificate button
             verifyBtn.addEventListener("click", async () => {
                 const certificateId = certificateIdInput.value.trim();
                 const activeRoleBtn = document.querySelector(".role-btn.active");
@@ -242,6 +234,7 @@
                     errorBox.textContent = "⚠ Please select a role first!";
                     return;
                 }
+
                 if (!certificateId) {
                     errorBox.style.display = "block";
                     errorBox.textContent = "⚠ Please enter your certificate ID!";
@@ -254,11 +247,15 @@
                         headers: { "Content-Type": "application/json" },
                         body: JSON.stringify({ id: certificateId })
                     });
-                    if (!response.ok) throw new Error("❌ Certificate not found");
+
+                    if (!response.ok) {
+                        throw new Error("❌ Certificate not found");
+                    }
 
                     const data = await response.json();
                     const selectedRole = activeRoleBtn.getAttribute("data-role").toLowerCase();
 
+                    // Check if role matches
                     if (data.role.toLowerCase() !== selectedRole) {
                         certificateDetails.style.display = "none";
                         errorBox.style.display = "block";
@@ -266,25 +263,26 @@
                         return;
                     }
 
-                    // Display details
+                    // ✅ Display certificate details
                     certificateDetails.style.display = "block";
                     errorBox.style.display = "none";
-                    document.getElementById("certName").textContent  = data.name || "N/A";
-                    document.getElementById("certCourse").textContent = data.course || "N/A";
-                    document.getElementById("certDate").textContent  = data.completionDate || "N/A";
-                    document.getElementById("certNumber").textContent = data.certificateNumber || "N/A";
-                    document.getElementById("certRole").textContent  = data.role || "N/A";
 
-                    // 🔹 Overlay name & course on the certificate image
-                    overlayName.textContent  = data.name || "";
-                    overlayCourse.textContent = data.course || "";
+                    document.getElementById("certName").textContent = data.name || "N/A";
+                    document.getElementById("certCourse").textContent = data.course || data.department || data.competition || "N/A";
+                    document.getElementById("certDate").textContent = data.completionDate || "N/A";
+                    document.getElementById("certNumber").textContent = data.certificateNumber || "N/A";
+                    document.getElementById("certRole").textContent = data.role || "N/A";
+
                 } catch (err) {
+                    const errorBox = document.getElementById("certError");
+                    const errorMsg = document.getElementById("certErrorMsg");
                     certificateDetails.style.display = "none";
                     errorBox.style.display = "block";
-                    errorBox.textContent = err.message;
+                    errorMsg.textContent = err.message;
                 }
             });
 
+            // Feedback submission
             submitFeedback.addEventListener("click", () => {
                 const feedback = feedbackInput.value.trim();
                 if (feedback) {
@@ -296,18 +294,22 @@
                 }
             });
 
+            // Sidebar (mobile menu)
             const menuBtn = document.getElementById('menu-btn');
             const sidebar = document.getElementById('sidebar');
             const overlay = document.getElementById('overlay');
+
             menuBtn.addEventListener('click', () => {
                 sidebar.classList.toggle('active');
                 overlay.classList.toggle('active');
             });
+
             overlay.addEventListener('click', () => {
                 sidebar.classList.remove('active');
                 overlay.classList.remove('active');
             });
         });
         </script>
+
     </body>
 </html>
