@@ -1,315 +1,115 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>MSN-Academy</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-        <link rel="stylesheet" href="styles/certificate.css">
-        <link rel="icon" href="icons/favicon.png">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    </head>
-    <body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificate Verification</title>
 
-        <!-- Header -->
-        <div class="header-background">
-            <section class="header">
-                <div class="left-section">
-                    <img class="academy-logo" src="icons/logo.png" alt="MSN Academy Logo">
-                    <nav class="nav-links">
-                        <a href="main.html" class="home">Home</a>
-                        <a href="course.html" class="courses">Courses</a>
-                        <a href="certificate.html" class="certi">Certificate</a>
-                        <a href="contact.html" class="contact">Contact Us</a>
-                    </nav>
-                </div>
+  <link rel="stylesheet" href="styles/certificate.css">
+  <style>
+    /* === CERTIFICATE PREVIEW === */
+    .certificate-preview {
+      position: relative;
+      display: inline-block;
+      max-width: 100%;
+    }
 
-                <div class="right-section">
-                    <a href="https://forms.gle/c82S9HnVPQCKf1vE8">
-                        <button class="join-button">Join</button>
-                    </a>
-                    <button class="learn-button">Learn</button>
-                </div>
-                <!-- Hamburger -->
-                <button id="menu-btn" class="hamburger">&#9776;</button> <!-- ☰ -->
-            </section>
-        </div>
+    .certificate-preview img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
 
-        <!-- Sidebar (for mobile) -->
-        <div class="sidebar" id="sidebar">
-            <a href="main.html" class="home">Home</a>
-            <a href="course.html" class="courses">Courses</a>
-            <a href="certificate.html" class="certi">Certificate</a>
-            <a href="contact.html" class="contact">Contact Us</a>
-            <a href="https://forms.gle/c82S9HnVPQCKf1vE8" class="join">Join</a>
-            <a href="#" class="learn">Learn</a>
-        </div>
+    /* === OVERLAY TEXT === */
+    .cert-overlay {
+      position: absolute;
+      left: 50%;         /* center horizontally */
+      top: 50%;          /* adjust this for correct vertical position */
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #004AAD;    /* ✅ Replace with the exact color used on your design */
+      font-family: 'Schibsted Grotesk', sans-serif;
+      pointer-events: none;
+    }
+    .cert-overlay h3 {
+      font-size: 2.4rem;  /* adjust for size on your certificate */
+      margin: 0;
+      font-weight: 700;
+    }
+    .cert-overlay p {
+      font-size: 1.6rem;
+      margin: 0;
+    }
 
-        <!-- Overlay (click to close) -->
-        <div id="overlay" class="overlay"></div>
-        
-        <!-- Certificate Verification Section -->
-        <section class="certificate-verification">
-            <h2>Certificate Verification</h2>
-            <p>Easily verify your certificate issued by MSN Academy. Just select your role and enter your ID to access your certificate details.</p>
-            
-            <div class="verification-container">
-                <!-- Left Side -->
-                <div class="verification-left">
-                    <h2>Select Certificate Type</h2>
-                    <div class="role-buttons">
-                        <button class="role-btn" data-role="student">Student</button>
-                        <button class="role-btn" data-role="intern">Intern</button>
-                        <button class="role-btn" data-role="competitor">Competitor</button>
-                    </div>
+    /* === DETAILS / FORM === */
+    .certificate-details {
+      margin-top: 1rem;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
 
-                    <h2>Enter Certificate ID</h2>
-                    <input type="text" id="certificateId" placeholder="Enter your certificate ID">
-                    <button id="verifyBtn">Verify Certificate</button>
-                    <p class="instant-text">Instant results available</p>
+  <!-- Certificate Preview -->
+  <div class="certificate-preview">
+    <img id="certificateImage"
+         src="images/Certificates Designs/default.png"
+         alt="Certificate Preview">
 
-                    <!-- Feedback Section -->
-                    <div id="feedbackSection" class="feedback-section" style="display:none;">
-                        <h2>We&apos;d love your Feedback &#128172;</h2> <!-- 💬 -->
-                        <textarea id="feedbackInput" placeholder="Write your review here..."></textarea>
-                        <button id="submitFeedback">Submit Feedback</button>
-                    </div>
+    <!-- Dynamic Name & Course -->
+    <div id="certOverlay" class="cert-overlay">
+      <h3 id="overlayName">Your Name Here</h3>
+      <p id="overlayCourse">Course Name Here</p>
+    </div>
+  </div>
 
-                    <!-- Details -->
-                    <div class="details-box">
-                        <h4>Details</h4>
-                        <p>Your certificate will include your full name, course name or intern department, completion date, and a unique certificate number. You can also preview your certificate once verified.</p>
-                    </div>
-                </div>
+  <!-- Certificate Details (optional right-side panel) -->
+  <div id="certificateDetails" class="certificate-details" style="display:none;">
+    <p><strong>Name:</strong> <span id="certName"></span></p>
+    <p><strong>Course:</strong> <span id="certCourse"></span></p>
+    <p><strong>Completion Date:</strong> <span id="certDate"></span></p>
+    <p><strong>Certificate Number:</strong> <span id="certNumber"></span></p>
+    <p><strong>Role:</strong> <span id="certRole"></span></p>
+  </div>
 
-                <!-- Right Side -->
-                <div class="verification-right">
-                    <div class="certificate-preview">
-                        <img id="certificateImage" src="images/Certificates Designs/default.png" alt="Certificate Preview">
-                    </div>
-                    <!-- Certificate Details -->
-                    <div id="certificateDetails" class="certificate-details">
-                        <p><strong>Name:</strong> <span id="certName"></span></p>
-                        <p><strong>Course:</strong> <span id="certCourse"></span></p>
-                        <p><strong>Completion Date:</strong> <span id="certDate"></span></p>
-                        <p><strong>Certificate Number:</strong> <span id="certNumber"></span></p>
-                        <p><strong>Role:</strong> <span id="certRole"></span></p>
-                    </div>
+  <!-- Error Message -->
+  <div id="certError" class="cert-error" style="color:red;"></div>
 
-                    <!-- Error Box -->
-                    <div id="certError" class="cert-error"></div>
-                </div>
-            </div>
-        </section>
+  <script>
+    // === Example Verification Handler ===
+    // Replace this with your actual fetch logic
+    async function verifyCertificate() {
+      try {
+        // Simulated API response
+        const data = {
+          name: "Jane Doe",
+          course: "Advanced JavaScript",
+          completionDate: "2025-09-01",
+          certificateNumber: "MSN-2025-001",
+          role: "Student"
+        };
 
-        <!-- Steps Section -->
-        <section class="verification-steps">
-            <h1 class="steps-title">Certificate Verification Made Simple</h1>
-            <p class="steps-subtitle">
-                Easily verify your certificate from MSN Academy. Select your role and enter your ID to access your credentials.
-            </p>
+        // Update overlay text
+        document.getElementById("overlayName").textContent  = data.name;
+        document.getElementById("overlayCourse").textContent = data.course;
 
-            <div class="steps-container">
-                <div class="step">
-                    <div class="step-icon">&#9745;</div> <!-- ☑ -->
-                    <h3>Choose Your Role</h3>
-                    <p>Select either Student or Intern or Competitor to proceed.</p>
-                </div>
+        // Update details panel
+        document.getElementById("certName").textContent   = data.name;
+        document.getElementById("certCourse").textContent = data.course;
+        document.getElementById("certDate").textContent   = data.completionDate;
+        document.getElementById("certNumber").textContent = data.certificateNumber;
+        document.getElementById("certRole").textContent   = data.role;
 
-                <div class="step">
-                    <div class="step-icon">&#9745;</div> <!-- ☑ -->
-                    <h3>Enter Your ID</h3>
-                    <p>Provide the relevant ID to verify your certificate.</p>
-                </div>
+        document.getElementById("certificateDetails").style.display = "block";
+        document.getElementById("certError").textContent = "";
+      } catch (error) {
+        document.getElementById("certError").textContent =
+          "Error verifying certificate. Please try again.";
+      }
+    }
 
-                <div class="step">
-                    <div class="step-icon">&#9745;</div> <!-- ☑ -->
-                    <h3>See Your Certificate</h3>
-                    <p>Click the button to verify your certificate.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-content">
-                <div>
-                    <img src="icons/logo.png" alt="Academy Logo" class="academy-logo-bottom">
-                </div>
-
-                <div>
-                    <h4>About Us</h4>
-                    <a href="#">Our Story</a><br>
-                    <a href="#">Mission & Vision</a><br>
-                    <a href="#">Careers</a>
-                </div>
-
-                <div>
-                    <h4>Courses</h4>
-                    <a href="DA.html">Data Analyst</a><br>
-                    <a href="PP.html">Python Programming</a><br>
-                    <a href="GenAI.html">Generative Artificial Intelligence (Gen AI)</a><br>
-                    <a href="SE NET.html">Software Engineering with ASP.NET Core</a><br>
-                    <a href="FSG UIUX.html">Full Stack Graphic Designing with UI UX</a><br>
-                    <a href="DM AI.html">Digital Marketing with AI tools</a><br>
-                    <a href="FD.html">Frontend Development</a><br>
-                    <a href="MERN.html">MERN Stack</a><br>
-                    <a href="WD.html">Wordpress Development</a><br>
-                    <a href="CP.html">Competitive Programming</a>
-                </div>
-
-                <div>
-                    <h4>Support</h4>
-                    <a href="#">FAQs</a><br>
-                    <a href="#">Contact: +92 324 8290683</a><br>
-                    <a href="#">Privacy Policy</a>
-                </div>
-
-                <div>
-                    <h4>Follow Us</h4>
-                    <a href="mailto:msn.academy269@gmail.com">msn.academy269@gmail.com</a><br>
-                    <a href="https://www.linkedin.com/company/msn-academy269/">LinkedIn</a>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                &copy; 2025 Your Website Name. All rights reserved.
-            </div>
-        </footer>
-
-        <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            // DOM Elements
-            const roleButtons = document.querySelectorAll(".role-btn");
-            const certificateImage = document.getElementById("certificateImage");
-            const certificateIdInput = document.getElementById("certificateId");
-            const verifyBtn = document.getElementById("verifyBtn");
-            const certificateDetails = document.getElementById("certificateDetails");
-            const feedbackSection = document.getElementById("feedbackSection");
-            const feedbackInput = document.getElementById("feedbackInput");
-            const submitFeedback = document.getElementById("submitFeedback");
-            const errorBox = document.getElementById("certError");
-
-            // Certificate image mapping
-            const certificates = {
-                student: "images/Certificates Designs/Student Course Completion Certificate.png",
-                intern: "images/Certificates Designs/Internship Completion Example.png",
-                competitor: "images/Certificates Designs/MSN Competition Certificate for app and web.png",
-                default: "images/Certificates Designs/default.png"
-            };
-
-            // Set default certificate preview
-            certificateImage.src = certificates["default"];
-            certificateDetails.style.display = "none"; // hide details initially
-
-            // Role selection
-            roleButtons.forEach(btn => {
-                btn.addEventListener("click", () => {
-                    roleButtons.forEach(b => b.classList.remove("active"));
-                    btn.classList.add("active");
-
-                    const role = btn.getAttribute("data-role").toLowerCase();
-                    certificateImage.src = certificates[role] || certificates["default"];
-
-                    // Show feedback only for student or intern
-                    if (role === "student" || role === "intern") {
-                        feedbackSection.style.display = "block";
-                    } else {
-                        feedbackSection.style.display = "none";
-                    }
-
-                    // Hide certificate details & errors until verification
-                    certificateDetails.style.display = "none";
-                    errorBox.style.display = "none";
-                });
-            });
-
-            // Verify certificate button
-            verifyBtn.addEventListener("click", async () => {
-                const certificateId = certificateIdInput.value.trim();
-                const activeRoleBtn = document.querySelector(".role-btn.active");
-
-                if (!activeRoleBtn) {
-                    errorBox.style.display = "block";
-                    errorBox.textContent = "⚠ Please select a role first!";
-                    return;
-                }
-
-                if (!certificateId) {
-                    errorBox.style.display = "block";
-                    errorBox.textContent = "⚠ Please enter your certificate ID!";
-                    return;
-                }
-
-                try {
-                    const response = await fetch("https://msn-academy-intern.vercel.app/api/verify", {
-                        method: "POST",
-                        headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify({ id: certificateId })
-                    });
-
-                    if (!response.ok) {
-                        throw new Error("❌ Certificate not found");
-                    }
-
-                    const data = await response.json();
-                    const selectedRole = activeRoleBtn.getAttribute("data-role").toLowerCase();
-
-                    // Check if role matches
-                    if (data.role.toLowerCase() !== selectedRole) {
-                        certificateDetails.style.display = "none";
-                        errorBox.style.display = "block";
-                        errorBox.textContent = `❌ This certificate belongs to a ${data.role}, not a ${selectedRole}.`;
-                        return;
-                    }
-
-                    // ✅ Display certificate details
-                    certificateDetails.style.display = "block";
-                    errorBox.style.display = "none";
-
-                    document.getElementById("certName").textContent = data.name || "N/A";
-                    document.getElementById("certCourse").textContent = data.course || data.department || data.competition || "N/A";
-                    document.getElementById("certDate").textContent = data.completionDate || "N/A";
-                    document.getElementById("certNumber").textContent = data.certificateNumber || "N/A";
-                    document.getElementById("certRole").textContent = data.role || "N/A";
-
-                } catch (err) {
-                    const errorBox = document.getElementById("certError");
-                    const errorMsg = document.getElementById("certErrorMsg");
-                    certificateDetails.style.display = "none";
-                    errorBox.style.display = "block";
-                    errorMsg.textContent = err.message;
-                }
-            });
-
-            // Feedback submission
-            submitFeedback.addEventListener("click", () => {
-                const feedback = feedbackInput.value.trim();
-                if (feedback) {
-                    alert("✅ Thank you for your feedback!");
-                    feedbackInput.value = "";
-                    feedbackSection.style.display = "none";
-                } else {
-                    alert("⚠ Please write something before submitting.");
-                }
-            });
-
-            // Sidebar (mobile menu)
-            const menuBtn = document.getElementById('menu-btn');
-            const sidebar = document.getElementById('sidebar');
-            const overlay = document.getElementById('overlay');
-
-            menuBtn.addEventListener('click', () => {
-                sidebar.classList.toggle('active');
-                overlay.classList.toggle('active');
-            });
-
-            overlay.addEventListener('click', () => {
-                sidebar.classList.remove('active');
-                overlay.classList.remove('active');
-            });
-        });
-        </script>
-
-    </body>
+    // Auto-run for demo (remove in production)
+    verifyCertificate();
+  </script>
+</body>
 </html>
