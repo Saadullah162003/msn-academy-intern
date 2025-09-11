@@ -402,6 +402,11 @@ body, html {
     color: #c0392b;
 }
 
+    canvas {
+      border: 1px solid #ccc;
+      margin-top: 20px;
+      display: none;
+    }
 
 /* ================================
    STEPS SECTION
