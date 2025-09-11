@@ -1,315 +1,332 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>MSN-Academy</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-        <link rel="stylesheet" href="styles/certificate.css">
-        <link rel="icon" href="icons/favicon.png">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    </head>
-    <body>
+<head>
+    <title>MSN-Academy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/certificate.css">
+    <link rel="icon" href="icons/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
 
-        <!-- Header -->
-        <div class="header-background">
-            <section class="header">
-                <div class="left-section">
-                    <img class="academy-logo" src="icons/logo.png" alt="MSN Academy Logo">
-                    <nav class="nav-links">
-                        <a href="main.html" class="home">Home</a>
-                        <a href="course.html" class="courses">Courses</a>
-                        <a href="certificate.html" class="certi">Certificate</a>
-                        <a href="contact.html" class="contact">Contact Us</a>
-                    </nav>
-                </div>
+    <!-- Header -->
+    <div class="header-background">
+        <section class="header">
+            <div class="left-section">
+                <img class="academy-logo" src="icons/logo.png" alt="MSN Academy Logo">
+                <nav class="nav-links">
+                    <a href="main.html" class="home">Home</a>
+                    <a href="course.html" class="courses">Courses</a>
+                    <a href="certificate.html" class="certi">Certificate</a>
+                    <a href="contact.html" class="contact">Contact Us</a>
+                </nav>
+            </div>
 
-                <div class="right-section">
-                    <a href="https://forms.gle/c82S9HnVPQCKf1vE8">
-                        <button class="join-button">Join</button>
-                    </a>
-                    <button class="learn-button">Learn</button>
-                </div>
-                <!-- Hamburger -->
-                <button id="menu-btn" class="hamburger">&#9776;</button> <!-- ☰ -->
-            </section>
-        </div>
+            <div class="right-section">
+                <a href="https://forms.gle/c82S9HnVPQCKf1vE8">
+                    <button class="join-button">Join</button>
+                </a>
+                <button class="learn-button">Learn</button>
+            </div>
+            <!-- Hamburger -->
+            <button id="menu-btn" class="hamburger">&#9776;</button>
+        </section>
+    </div>
 
-        <!-- Sidebar (for mobile) -->
-        <div class="sidebar" id="sidebar">
-            <a href="main.html" class="home">Home</a>
-            <a href="course.html" class="courses">Courses</a>
-            <a href="certificate.html" class="certi">Certificate</a>
-            <a href="contact.html" class="contact">Contact Us</a>
-            <a href="https://forms.gle/c82S9HnVPQCKf1vE8" class="join">Join</a>
-            <a href="#" class="learn">Learn</a>
-        </div>
+    <!-- Sidebar (for mobile) -->
+    <div class="sidebar" id="sidebar">
+        <a href="main.html" class="home">Home</a>
+        <a href="course.html" class="courses">Courses</a>
+        <a href="certificate.html" class="certi">Certificate</a>
+        <a href="contact.html" class="contact">Contact Us</a>
+        <a href="https://forms.gle/c82S9HnVPQCKf1vE8" class="join">Join</a>
+        <a href="#" class="learn">Learn</a>
+    </div>
 
-        <!-- Overlay (click to close) -->
-        <div id="overlay" class="overlay"></div>
+    <!-- Overlay -->
+    <div id="overlay" class="overlay"></div>
+    
+    <!-- Certificate Verification Section -->
+    <section class="certificate-verification">
+        <h2>Certificate Verification</h2>
+        <p>Easily verify your certificate issued by MSN Academy. Just select your role and enter your ID to access your certificate details.</p>
         
-        <!-- Certificate Verification Section -->
-        <section class="certificate-verification">
-            <h2>Certificate Verification</h2>
-            <p>Easily verify your certificate issued by MSN Academy. Just select your role and enter your ID to access your certificate details.</p>
-            
-            <div class="verification-container">
-                <!-- Left Side -->
-                <div class="verification-left">
-                    <h2>Select Certificate Type</h2>
-                    <div class="role-buttons">
-                        <button class="role-btn" data-role="student">Student</button>
-                        <button class="role-btn" data-role="intern">Intern</button>
-                        <button class="role-btn" data-role="competitor">Competitor</button>
-                    </div>
-
-                    <h2>Enter Certificate ID</h2>
-                    <input type="text" id="certificateId" placeholder="Enter your certificate ID">
-                    <button id="verifyBtn">Verify Certificate</button>
-                    <p class="instant-text">Instant results available</p>
-
-                    <!-- Feedback Section -->
-                    <div id="feedbackSection" class="feedback-section" style="display:none;">
-                        <h2>We&apos;d love your Feedback &#128172;</h2> <!-- 💬 -->
-                        <textarea id="feedbackInput" placeholder="Write your review here..."></textarea>
-                        <button id="submitFeedback">Submit Feedback</button>
-                    </div>
-
-                    <!-- Details -->
-                    <div class="details-box">
-                        <h4>Details</h4>
-                        <p>Your certificate will include your full name, course name or intern department, completion date, and a unique certificate number. You can also preview your certificate once verified.</p>
-                    </div>
+        <div class="verification-container">
+            <!-- Left Side -->
+            <div class="verification-left">
+                <h2>Select Certificate Type</h2>
+                <div class="role-buttons">
+                    <button class="role-btn" data-role="student">Student</button>
+                    <button class="role-btn" data-role="intern">Intern</button>
+                    <button class="role-btn" data-role="competitor">Competitor</button>
                 </div>
 
-                <!-- Right Side -->
-                <div class="verification-right">
-                    <div class="certificate-preview">
-                        <img id="certificateImage" src="images/Certificates Designs/default.png" alt="Certificate Preview">
-                    </div>
-                    <!-- Certificate Details -->
-                    <div id="certificateDetails" class="certificate-details">
-                        <p><strong>Name:</strong> <span id="certName"></span></p>
-                        <p><strong>Course:</strong> <span id="certCourse"></span></p>
-                        <p><strong>Completion Date:</strong> <span id="certDate"></span></p>
-                        <p><strong>Certificate Number:</strong> <span id="certNumber"></span></p>
-                        <p><strong>Role:</strong> <span id="certRole"></span></p>
-                    </div>
+                <h2>Enter Certificate ID</h2>
+                <input type="text" id="certificateId" placeholder="Enter your certificate ID">
+                <button id="verifyBtn">Verify Certificate</button>
+                <p class="instant-text">Instant results available</p>
 
-                    <!-- Error Box -->
-                    <div id="certError" class="cert-error"></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Steps Section -->
-        <section class="verification-steps">
-            <h1 class="steps-title">Certificate Verification Made Simple</h1>
-            <p class="steps-subtitle">
-                Easily verify your certificate from MSN Academy. Select your role and enter your ID to access your credentials.
-            </p>
-
-            <div class="steps-container">
-                <div class="step">
-                    <div class="step-icon">&#9745;</div> <!-- ☑ -->
-                    <h3>Choose Your Role</h3>
-                    <p>Select either Student or Intern or Competitor to proceed.</p>
+                <!-- Feedback Section -->
+                <div id="feedbackSection" class="feedback-section" style="display:none;">
+                    <h2>We&apos;d love your Feedback &#128172;</h2>
+                    <textarea id="feedbackInput" placeholder="Write your review here..."></textarea>
+                    <button id="submitFeedback">Submit Feedback</button>
                 </div>
 
-                <div class="step">
-                    <div class="step-icon">&#9745;</div> <!-- ☑ -->
-                    <h3>Enter Your ID</h3>
-                    <p>Provide the relevant ID to verify your certificate.</p>
-                </div>
-
-                <div class="step">
-                    <div class="step-icon">&#9745;</div> <!-- ☑ -->
-                    <h3>See Your Certificate</h3>
-                    <p>Click the button to verify your certificate.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-content">
-                <div>
-                    <img src="icons/logo.png" alt="Academy Logo" class="academy-logo-bottom">
-                </div>
-
-                <div>
-                    <h4>About Us</h4>
-                    <a href="#">Our Story</a><br>
-                    <a href="#">Mission & Vision</a><br>
-                    <a href="#">Careers</a>
-                </div>
-
-                <div>
-                    <h4>Courses</h4>
-                    <a href="DA.html">Data Analyst</a><br>
-                    <a href="PP.html">Python Programming</a><br>
-                    <a href="GenAI.html">Generative Artificial Intelligence (Gen AI)</a><br>
-                    <a href="SE NET.html">Software Engineering with ASP.NET Core</a><br>
-                    <a href="FSG UIUX.html">Full Stack Graphic Designing with UI UX</a><br>
-                    <a href="DM AI.html">Digital Marketing with AI tools</a><br>
-                    <a href="FD.html">Frontend Development</a><br>
-                    <a href="MERN.html">MERN Stack</a><br>
-                    <a href="WD.html">Wordpress Development</a><br>
-                    <a href="CP.html">Competitive Programming</a>
-                </div>
-
-                <div>
-                    <h4>Support</h4>
-                    <a href="#">FAQs</a><br>
-                    <a href="#">Contact: +92 324 8290683</a><br>
-                    <a href="#">Privacy Policy</a>
-                </div>
-
-                <div>
-                    <h4>Follow Us</h4>
-                    <a href="mailto:msn.academy269@gmail.com">msn.academy269@gmail.com</a><br>
-                    <a href="https://www.linkedin.com/company/msn-academy269/">LinkedIn</a>
+                <!-- Details -->
+                <div class="details-box">
+                    <h4>Details</h4>
+                    <p>Your certificate will include your full name, course name or intern department, completion date, and a unique certificate number. You can also preview your certificate once verified.</p>
                 </div>
             </div>
 
-            <div class="footer-bottom">
-                &copy; 2025 Your Website Name. All rights reserved.
+            <!-- Right Side -->
+            <div class="verification-right">
+                <div class="certificate-preview">
+                    <!-- Canvas (drawn certificate) -->
+                    <canvas id="certificateCanvas" width="1000" height="700" style="display:none;"></canvas>
+                    <!-- Fallback Image -->
+                    <img id="certificateImage" src="images/Certificates Designs/default.png" alt="Certificate Preview">
+                </div>
+                <!-- Certificate Details -->
+                <div id="certificateDetails" class="certificate-details">
+                    <p><strong>Name:</strong> <span id="certName"></span></p>
+                    <p><strong>Course:</strong> <span id="certCourse"></span></p>
+                    <p><strong>Completion Date:</strong> <span id="certDate"></span></p>
+                    <p><strong>Certificate Number:</strong> <span id="certNumber"></span></p>
+                    <p><strong>Role:</strong> <span id="certRole"></span></p>
+                </div>
+
+                <!-- Download Button -->
+                <button id="downloadBtn" style="display:none; margin-top:10px;">Download Certificate</button>
+
+                <!-- Error Box -->
+                <div id="certError" class="cert-error"></div>
             </div>
-        </footer>
+        </div>
+    </section>
 
-        <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            // DOM Elements
-            const roleButtons = document.querySelectorAll(".role-btn");
-            const certificateImage = document.getElementById("certificateImage");
-            const certificateIdInput = document.getElementById("certificateId");
-            const verifyBtn = document.getElementById("verifyBtn");
-            const certificateDetails = document.getElementById("certificateDetails");
-            const feedbackSection = document.getElementById("feedbackSection");
-            const feedbackInput = document.getElementById("feedbackInput");
-            const submitFeedback = document.getElementById("submitFeedback");
-            const errorBox = document.getElementById("certError");
+    <!-- Steps Section -->
+    <section class="verification-steps">
+        <h1 class="steps-title">Certificate Verification Made Simple</h1>
+        <p class="steps-subtitle">
+            Easily verify your certificate from MSN Academy. Select your role and enter your ID to access your credentials.
+        </p>
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-icon">&#9745;</div>
+                <h3>Choose Your Role</h3>
+                <p>Select either Student or Intern or Competitor to proceed.</p>
+            </div>
+            <div class="step">
+                <div class="step-icon">&#9745;</div>
+                <h3>Enter Your ID</h3>
+                <p>Provide the relevant ID to verify your certificate.</p>
+            </div>
+            <div class="step">
+                <div class="step-icon">&#9745;</div>
+                <h3>See Your Certificate</h3>
+                <p>Click the button to verify your certificate.</p>
+            </div>
+        </div>
+    </section>
 
-            // Certificate image mapping
-            const certificates = {
-                student: "images/Certificates Designs/Student Course Completion Certificate.png",
-                intern: "images/Certificates Designs/Internship Completion Example.png",
-                competitor: "images/Certificates Designs/MSN Competition Certificate for app and web.png",
-                default: "images/Certificates Designs/default.png"
-            };
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <img src="icons/logo.png" alt="Academy Logo" class="academy-logo-bottom">
+            </div>
+            <div>
+                <h4>About Us</h4>
+                <a href="#">Our Story</a><br>
+                <a href="#">Mission & Vision</a><br>
+                <a href="#">Careers</a>
+            </div>
+            <div>
+                <h4>Courses</h4>
+                <a href="DA.html">Data Analyst</a><br>
+                <a href="PP.html">Python Programming</a><br>
+                <a href="GenAI.html">Generative Artificial Intelligence (Gen AI)</a><br>
+                <a href="SE NET.html">Software Engineering with ASP.NET Core</a><br>
+                <a href="FSG UIUX.html">Full Stack Graphic Designing with UI UX</a><br>
+                <a href="DM AI.html">Digital Marketing with AI tools</a><br>
+                <a href="FD.html">Frontend Development</a><br>
+                <a href="MERN.html">MERN Stack</a><br>
+                <a href="WD.html">Wordpress Development</a><br>
+                <a href="CP.html">Competitive Programming</a>
+            </div>
+            <div>
+                <h4>Support</h4>
+                <a href="#">FAQs</a><br>
+                <a href="#">Contact: +92 324 8290683</a><br>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <div>
+                <h4>Follow Us</h4>
+                <a href="mailto:msn.academy269@gmail.com">msn.academy269@gmail.com</a><br>
+                <a href="https://www.linkedin.com/company/msn-academy269/">LinkedIn</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 MSN Academy. All rights reserved.
+        </div>
+    </footer>
 
-            // Set default certificate preview
-            certificateImage.src = certificates["default"];
-            certificateDetails.style.display = "none"; // hide details initially
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const roleButtons = document.querySelectorAll(".role-btn");
+        const certificateImage = document.getElementById("certificateImage");
+        const certificateCanvas = document.getElementById("certificateCanvas");
+        const ctx = certificateCanvas.getContext("2d");
+        const certificateIdInput = document.getElementById("certificateId");
+        const verifyBtn = document.getElementById("verifyBtn");
+        const certificateDetails = document.getElementById("certificateDetails");
+        const feedbackSection = document.getElementById("feedbackSection");
+        const feedbackInput = document.getElementById("feedbackInput");
+        const submitFeedback = document.getElementById("submitFeedback");
+        const errorBox = document.getElementById("certError");
+        const downloadBtn = document.getElementById("downloadBtn");
 
-            // Role selection
-            roleButtons.forEach(btn => {
-                btn.addEventListener("click", () => {
-                    roleButtons.forEach(b => b.classList.remove("active"));
-                    btn.classList.add("active");
+        const certificates = {
+            student: "images/Certificates Designs/Student Course Completion Certificate.png",
+            intern: "images/Certificates Designs/Internship Completion Example.png",
+            competitor: "images/Certificates Designs/MSN Competition Certificate for app and web.png",
+            default: "images/Certificates Designs/default.png"
+        };
 
-                    const role = btn.getAttribute("data-role").toLowerCase();
-                    certificateImage.src = certificates[role] || certificates["default"];
+        certificateImage.src = certificates["default"];
+        certificateDetails.style.display = "none";
 
-                    // Show feedback only for student or intern
-                    if (role === "student" || role === "intern") {
-                        feedbackSection.style.display = "block";
-                    } else {
-                        feedbackSection.style.display = "none";
-                    }
+        roleButtons.forEach(btn => {
+            btn.addEventListener("click", () => {
+                roleButtons.forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
 
-                    // Hide certificate details & errors until verification
-                    certificateDetails.style.display = "none";
-                    errorBox.style.display = "none";
-                });
-            });
+                const role = btn.getAttribute("data-role").toLowerCase();
+                certificateImage.src = certificates[role] || certificates["default"];
+                certificateCanvas.style.display = "none";
+                downloadBtn.style.display = "none";
 
-            // Verify certificate button
-            verifyBtn.addEventListener("click", async () => {
-                const certificateId = certificateIdInput.value.trim();
-                const activeRoleBtn = document.querySelector(".role-btn.active");
-
-                if (!activeRoleBtn) {
-                    errorBox.style.display = "block";
-                    errorBox.textContent = "⚠ Please select a role first!";
-                    return;
-                }
-
-                if (!certificateId) {
-                    errorBox.style.display = "block";
-                    errorBox.textContent = "⚠ Please enter your certificate ID!";
-                    return;
-                }
-
-                try {
-                    const response = await fetch("https://msn-academy-intern.vercel.app/api/verify", {
-                        method: "POST",
-                        headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify({ id: certificateId })
-                    });
-
-                    if (!response.ok) {
-                        throw new Error("❌ Certificate not found");
-                    }
-
-                    const data = await response.json();
-                    const selectedRole = activeRoleBtn.getAttribute("data-role").toLowerCase();
-
-                    // Check if role matches
-                    if (data.role.toLowerCase() !== selectedRole) {
-                        certificateDetails.style.display = "none";
-                        errorBox.style.display = "block";
-                        errorBox.textContent = `❌ This certificate belongs to a ${data.role}, not a ${selectedRole}.`;
-                        return;
-                    }
-
-                    // ✅ Display certificate details
-                    certificateDetails.style.display = "block";
-                    errorBox.style.display = "none";
-
-                    document.getElementById("certName").textContent = data.name || "N/A";
-                    document.getElementById("certCourse").textContent = data.course || data.department || data.competition || "N/A";
-                    document.getElementById("certDate").textContent = data.completionDate || "N/A";
-                    document.getElementById("certNumber").textContent = data.certificateNumber || "N/A";
-                    document.getElementById("certRole").textContent = data.role || "N/A";
-
-                } catch (err) {
-                    const errorBox = document.getElementById("certError");
-                    const errorMsg = document.getElementById("certErrorMsg");
-                    certificateDetails.style.display = "none";
-                    errorBox.style.display = "block";
-                    errorMsg.textContent = err.message;
-                }
-            });
-
-            // Feedback submission
-            submitFeedback.addEventListener("click", () => {
-                const feedback = feedbackInput.value.trim();
-                if (feedback) {
-                    alert("✅ Thank you for your feedback!");
-                    feedbackInput.value = "";
-                    feedbackSection.style.display = "none";
+                if (role === "student" || role === "intern") {
+                    feedbackSection.style.display = "block";
                 } else {
-                    alert("⚠ Please write something before submitting.");
+                    feedbackSection.style.display = "none";
                 }
-            });
 
-            // Sidebar (mobile menu)
-            const menuBtn = document.getElementById('menu-btn');
-            const sidebar = document.getElementById('sidebar');
-            const overlay = document.getElementById('overlay');
-
-            menuBtn.addEventListener('click', () => {
-                sidebar.classList.toggle('active');
-                overlay.classList.toggle('active');
-            });
-
-            overlay.addEventListener('click', () => {
-                sidebar.classList.remove('active');
-                overlay.classList.remove('active');
+                certificateDetails.style.display = "none";
+                errorBox.style.display = "none";
             });
         });
-        </script>
 
-    </body>
+        verifyBtn.addEventListener("click", async () => {
+            const certificateId = certificateIdInput.value.trim();
+            const activeRoleBtn = document.querySelector(".role-btn.active");
+
+            if (!activeRoleBtn) {
+                errorBox.style.display = "block";
+                errorBox.textContent = "⚠ Please select a role first!";
+                return;
+            }
+            if (!certificateId) {
+                errorBox.style.display = "block";
+                errorBox.textContent = "⚠ Please enter your certificate ID!";
+                return;
+            }
+
+            try {
+                const response = await fetch("https://msn-academy-intern.vercel.app/api/verify", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ id: certificateId })
+                });
+
+                if (!response.ok) throw new Error("❌ Certificate not found");
+
+                const data = await response.json();
+                const selectedRole = activeRoleBtn.getAttribute("data-role").toLowerCase();
+
+                if (data.role.toLowerCase() !== selectedRole) {
+                    certificateDetails.style.display = "none";
+                    errorBox.style.display = "block";
+                    errorBox.textContent = `❌ This certificate belongs to a ${data.role}, not a ${selectedRole}.`;
+                    return;
+                }
+
+                certificateDetails.style.display = "block";
+                errorBox.style.display = "none";
+
+                document.getElementById("certName").textContent = data.name || "N/A";
+                document.getElementById("certCourse").textContent = data.course || data.department || data.competition || "N/A";
+                document.getElementById("certDate").textContent = data.completionDate || "N/A";
+                document.getElementById("certNumber").textContent = data.certificateNumber || "N/A";
+                document.getElementById("certRole").textContent = data.role || "N/A";
+
+                // 🎨 Draw on canvas
+                const bgImg = new Image();
+                bgImg.src = certificates[selectedRole] || certificates["default"];
+                bgImg.onload = function() {
+                    ctx.clearRect(0, 0, certificateCanvas.width, certificateCanvas.height);
+                    ctx.drawImage(bgImg, 0, 0, certificateCanvas.width, certificateCanvas.height);
+
+                    ctx.font = "bold 32px Arial";
+                    ctx.fillStyle = "#2c3e50";
+                    ctx.textAlign = "center";
+                    ctx.fillText(data.name, certificateCanvas.width / 2, 350);
+
+                    ctx.font = "24px Arial";
+                    ctx.fillText(`has successfully completed: ${data.course}`, certificateCanvas.width / 2, 420);
+
+                    ctx.font = "20px Arial";
+                    ctx.fillText(`Role: ${data.role}`, certificateCanvas.width / 2, 470);
+
+                    ctx.font = "18px Arial";
+                    ctx.fillText(`Date: ${data.completionDate}   |   ID: ${data.certificateNumber}`, certificateCanvas.width / 2, 520);
+
+                    certificateCanvas.style.display = "block";
+                    certificateImage.style.display = "none";
+                    downloadBtn.style.display = "inline-block";
+                };
+            } catch (err) {
+                certificateDetails.style.display = "none";
+                errorBox.style.display = "block";
+                errorBox.textContent = err.message;
+            }
+        });
+
+        downloadBtn.addEventListener("click", () => {
+            const link = document.createElement("a");
+            link.href = certificateCanvas.toDataURL("image/png");
+            link.download = "certificate.png";
+            link.click();
+        });
+
+        submitFeedback.addEventListener("click", () => {
+            const feedback = feedbackInput.value.trim();
+            if (feedback) {
+                alert("✅ Thank you for your feedback!");
+                feedbackInput.value = "";
+                feedbackSection.style.display = "none";
+            } else {
+                alert("⚠ Please write something before submitting.");
+            }
+        });
+
+        const menuBtn = document.getElementById('menu-btn');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        menuBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+            overlay.classList.toggle('active');
+        });
+        overlay.addEventListener('click', () => {
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+    });
+    </script>
+
+</body>
 </html>
