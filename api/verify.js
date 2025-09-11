@@ -8,97 +8,98 @@ export default function handler(req, res) {
 
     const certificates = {
       "MSN123": {
-        name: "Zain Ali",
-        course: "Data Science Fundamentals",
+        name: "Ali Khan",
+        course: "Python Programming",
         completionDate: "2025-09-01",
         certificateNumber: "MSN123",
         role: "Student"
       },
       "MSN456": {
-        name: "Mehwish Noor",
-        course: "Frontend Development",
+        name: "Sara Ahmed",
+        course: "Web Development",
         completionDate: "2025-08-15",
         certificateNumber: "MSN456",
         role: "Intern"
       },
       "MSN789": {
-        name: "Talha Waheed",
+        name: "Hamza Ali",
         course: "Competitive Programming",
         completionDate: "2025-07-20",
         certificateNumber: "MSN789",
         role: "Competitor"
       },
       "MSN101": {
-        name: "Kiran Fatima",
-        course: "UI/UX Designing",
+        name: "Fatima Zahra",
+        course: "Data Analyst",
         completionDate: "2025-06-10",
         certificateNumber: "MSN101",
         role: "Student"
       },
       "MSN102": {
-        name: "Shahbaz Raza",
-        course: "Cloud Computing with AWS",
+        name: "Bilal Hussain",
+        course: "Python Programming",
         completionDate: "2025-06-18",
         certificateNumber: "MSN102",
         role: "Intern"
       },
       "MSN103": {
-        name: "Adeel Ahmed",
-        course: "Artificial Intelligence Essentials",
+        name: "Ayesha Malik",
+        course: "Generative Artificial Intelligence (Gen AI)",
         completionDate: "2025-05-25",
         certificateNumber: "MSN103",
         role: "Student"
       },
       "MSN104": {
-        name: "Nida Hussain",
-        course: "ASP.NET Core Development",
+        name: "Usman Iqbal",
+        course: "Software Engineering with ASP.NET Core",
         completionDate: "2025-05-12",
         certificateNumber: "MSN104",
         role: "Intern"
       },
       "MSN105": {
-        name: "Hassan Javed",
-        course: "Graphic Designing Masterclass",
+        name: "Hira Nadeem",
+        course: "Full Stack Graphic Designing with UI UX",
         completionDate: "2025-04-28",
         certificateNumber: "MSN105",
         role: "Student"
       },
       "MSN106": {
-        name: "Rabia Khalid",
-        course: "Digital Marketing with AI",
+        name: "Ahmad Raza",
+        course: "Digital Marketing with AI tools",
         completionDate: "2025-04-05",
         certificateNumber: "MSN106",
         role: "Intern"
       },
       "MSN107": {
-        name: "Umar Siddiqui",
-        course: "Frontend Engineering with React",
+        name: "Maryam Sheikh",
+        course: "Frontend Development",
         completionDate: "2025-03-22",
         certificateNumber: "MSN107",
         role: "Student"
       },
       "MSN108": {
-        name: "Farah Zahra",
-        course: "MERN Stack Development",
+        name: "Imran Khan",
+        course: "MERN Stack",
         completionDate: "2025-03-08",
         certificateNumber: "MSN108",
         role: "Intern"
       },
       "MSN109": {
-        name: "Adnan Tariq",
-        course: "WordPress Development",
+        name: "Sana Fatima",
+        course: "Wordpress Development",
         completionDate: "2025-02-18",
         certificateNumber: "MSN109",
         role: "Student"
       },
       "MSN110": {
-        name: "Huma Aslam",
-        course: "Algorithmic Problem Solving",
+        name: "Danish Ali",
+        course: "Competitive Programming",
         completionDate: "2025-01-30",
         certificateNumber: "MSN110",
         role: "Competitor"
       }
     };
+
 
     const record = certificates[id];
 
