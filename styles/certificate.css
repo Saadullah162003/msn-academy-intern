@@ -401,6 +401,56 @@ body, html {
     background: #fdecea;
     color: #c0392b;
 }
+/* ================================
+   CERTIFICATE OVERLAY TEXT
+   (Name & Course on Certificate)
+================================ */
+.certificate-preview {
+    position: relative; /* needed for absolute overlay */
+    display: inline-block;
+    width: 100%;
+    max-width: 100%;
+}
+
+.certificate-preview img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* Overlay container */
+.cert-overlay {
+    position: absolute;
+    left: 50%;
+    top: 50%; /* Adjust top for perfect vertical placement */
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #0f0f90;           /* ✅ Matches your theme’s deep blue */
+    font-family: 'Schibsted Grotesk', sans-serif;
+    pointer-events: none;     /* clicks pass through to image */
+    padding: 0 10px;
+}
+
+.cert-overlay h3 {
+    font-size: 2.4rem;        /* main name size */
+    font-weight: 700;
+    margin: 0 0 6px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2); /* subtle readability boost */
+}
+
+.cert-overlay p {
+    font-size: 1.6rem;        /* course size */
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Responsive overlay text */
+@media (max-width: 992px) {
+    .cert-overlay h3 { font-size: 4rem; }
+    .cert-overlay p  { font-size: 2.6rem; }
+}
 
 
 /* ================================
